@@ -43,7 +43,7 @@ export default function OmOssPage() {
               </section>
             ))}
           </div>
-          <ButtonLink href={omOssPage.originalSiteLink.href} variant="outline">
+          <ButtonLink href={omOssPage.originalSiteLink.href} variant="text">
             {omOssPage.originalSiteLink.label}
           </ButtonLink>
         </div>
