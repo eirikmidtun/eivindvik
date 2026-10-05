@@ -164,10 +164,10 @@ export const hero = {
   subtitle: "– der krossane står",
   lead: "Ei reise gjennom historia, landskapet og menneska som har forma Eivindvik, for deg som bur her og for deg som kjem på vitjing.",
   image: {
-    src: "/archive/kap01/midtunvaag.jpg",
-    alt: "Utsyn over Midtunvågen med gardar, sjø og fjell",
-    width: 635,
-    height: 451,
+    src: "/eivindvik-from-the-sea.jpg",
+    alt: "Eivindvik sett frå sjøen med kyrkja, båtar og fjella bak",
+    width: 825,
+    height: 222,
   },
 };
 
@@ -249,9 +249,6 @@ export const authorIntro = {
   },
   caption: "Magnor Midtun les prolog på Gulatingseminaret. Foto: Ukjent.",
 };
-
-// The band above the footer repeats the bottom of the front page hero photo.
-export const landscape: ImageAsset = hero.image;
 
 export const kartPage = {
   heroImage: hero.image,

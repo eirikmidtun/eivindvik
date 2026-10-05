@@ -1,10 +1,9 @@
 import type { Metadata } from "next";
 import { getWrittenWorkGroups } from "../archive";
 import { Footer } from "../components/Footer";
-import { LandscapeBand } from "../components/LandscapeBand";
 import { PageHero } from "../components/PageHero";
 import { WrittenWorkReader } from "../components/WrittenWorkReader";
-import { author, landscape, writtenWorksPage } from "../content";
+import { author, writtenWorksPage } from "../content";
 
 export const metadata: Metadata = {
   title: "Dikt og tekstar",
@@ -21,7 +20,6 @@ export default async function WrittenWorksPage() {
         <PageHero image={writtenWorksPage.heroImage} variant="banner" />
         <WrittenWorkReader groups={groups} author={author} />
       </main>
-      <LandscapeBand image={landscape} />
       <Footer />
     </>
   );

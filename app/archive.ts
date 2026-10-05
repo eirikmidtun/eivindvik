@@ -42,7 +42,9 @@ async function readJson<T>(file: string): Promise<T> {
 // Returns the chapter's main page and its sub-pages in manifest order.
 export async function getKapittelPages(kapittelNumber: number) {
   const manifest = await readJson<{ pages: ManifestEntry[] }>("manifest.json");
-  const entries = manifest.pages.filter((page) => page.chapterNumber === kapittelNumber);
+  const entries = manifest.pages.filter(
+    (page) => page.chapterNumber === kapittelNumber,
+  );
   return Promise.all(entries.map((entry) => readJson<ArchivePage>(entry.file)));
 }
 
@@ -83,7 +85,10 @@ function makeSectionId(title: string) {
 }
 
 // These editorial sections follow the chapter's existing subject changes.
-const kapittelSections: Record<string, { blockIndex: number; title: string }[]> = {
+const kapittelSections: Record<
+  string,
+  { blockIndex: number; title: string }[]
+> = {
   "kap03--krossane": [
     { blockIndex: 2, title: "Olavskrossen" },
     { blockIndex: 19, title: "Den angliske krossen" },
@@ -95,16 +100,22 @@ const kapittelSections: Record<string, { blockIndex: number; title: string }[]> 
 export function getKapittelSections(pages: ArchivePage[], title: string) {
   const firstPageSlug = pages[0]?.slug;
   const overrides = firstPageSlug ? kapittelSections[firstPageSlug] : undefined;
-  const sections = overrides && firstPageSlug
-    ? overrides.map((section) => ({ ...section, pageSlug: firstPageSlug }))
-    : pages.flatMap((page) =>
-        page.blocks.flatMap((block, blockIndex) => {
-          if (block.type !== "heading" || block.text.trim().toLowerCase() === title.trim().toLowerCase()) {
-            return [];
-          }
-          return [{ pageSlug: page.slug, blockIndex, title: block.text.trim() }];
-        }),
-      );
+  const sections =
+    overrides && firstPageSlug
+      ? overrides.map((section) => ({ ...section, pageSlug: firstPageSlug }))
+      : pages.flatMap((page) =>
+          page.blocks.flatMap((block, blockIndex) => {
+            if (
+              block.type !== "heading" ||
+              block.text.trim().toLowerCase() === title.trim().toLowerCase()
+            ) {
+              return [];
+            }
+            return [
+              { pageSlug: page.slug, blockIndex, title: block.text.trim() },
+            ];
+          }),
+        );
 
   const ids = new Map<string, number>();
   return sections.map((section) => {
@@ -137,7 +148,9 @@ type KapittelDiktRange = Omit<KapittelDikt, "pageSlug" | "stanzas"> & {
 // The scraped lines are separate paragraphs and can't be told apart from short
 // prose or tables reliably, so each poem is listed here by hand.
 const kapittelDikt: Record<string, KapittelDiktRange[]> = {
-  "kap01--innleiing": [{ firstBlock: 9, lastBlock: 12, source: "Frå «Bygda vår»" }],
+  "kap01--innleiing": [
+    { firstBlock: 9, lastBlock: 12, source: "Frå «Bygda vår»" },
+  ],
 };
 
 export function getKapittelDikt(pages: ArchivePage[]): KapittelDikt[] {
@@ -145,7 +158,11 @@ export function getKapittelDikt(pages: ArchivePage[]): KapittelDikt[] {
     (kapittelDikt[page.slug] ?? []).map(({ stanzaLengths, ...range }) => {
       const lines = page.blocks
         .slice(range.firstBlock, range.lastBlock + 1)
-        .flatMap((block) => (block.type === "paragraph" && block.text.trim() ? [block.text.trim()] : []));
+        .flatMap((block) =>
+          block.type === "paragraph" && block.text.trim()
+            ? [block.text.trim()]
+            : [],
+        );
       const stanzas: string[][] = [];
       let start = 0;
       for (const length of stanzaLengths ?? [lines.length]) {
@@ -188,20 +205,24 @@ const writtenWorkMetadata: Record<string, Record<string, string[]>> = {
   prologar: {
     "Eivindvik år 1000 – 2000": ["Eivindvik, nyttårsafta 1999."],
     "50-årskonfirmantar i Gulen kyrkje": ["1.9.1996"],
-    "Håkon adelsteinsfostre i gula": ["(1997)"],
+    "Håkon adelsteinsfostre i gula": ["1997"],
     "Gulen sanitetslag": ["Basar 13.3.1971."],
     "Gulen sjukeheim": ["Overlevering 1.6.1975."],
     Utvær: ["150504."],
     Vatnestemnet: ["Eivindvik Vertshus 25.5.1985."],
   },
   hoegtider: {
-    Jolekveld: ["Går til tone: “Eg er så glad kvar julekveld”, helst den danske tonen."],
-    Jul: ["Eg trur sangen kan gå til tone: «Det lyser i stille grender.» 14.11.1999."],
+    Jolekveld: [
+      "Går til tone: “Eg er så glad kvar julekveld”, helst den danske tonen.",
+    ],
+    Jul: [
+      "Eg trur sangen kan gå til tone: «Det lyser i stille grender.» 14.11.1999.",
+    ],
     Påske: ["Kan gå til tone: “Namnet Jesus”."],
   },
   bankar: {
     "Funksjonærtreff i Balestrand": ["26.9.1992."],
-    "Innviing av nytt bankhus": ["(Bygget vart teke i bruk 11.9.1978.)"],
+    "Innviing av nytt bankhus": ["Bygget vart teke i bruk 11.9.1978."],
     Fusjonsfest: ["I sparebanken Sogn og Fjordane, 8.4.1988."],
     "Sparebanken Askvoll 100 år": ["24.4.1993."],
     "Sparebanken Gaular 100 år": ["15.2.1994."],
@@ -211,11 +232,11 @@ const writtenWorkMetadata: Record<string, Record<string, string[]>> = {
 const metadataDisplayText: Record<string, string> = {
   "(1997)": "Skrevet i 1997.",
   "150504.": "15.05.04.",
-  'Går til tone: “Eg er så glad kvar julekveld”, helst den danske tonen.':
-    'Går til tone: «Eg er så glad kvar julekveld», helst den danske tonen.',
-  'Eg trur sangen kan gå til tone: «Det lyser i stille grender.» 14.11.1999.':
-    'Går til tone: «Det lyser i stille grender». 14.11.1999.',
-  'Kan gå til tone: “Namnet Jesus”.': 'Går til tone: «Namnet Jesus».',
+  "Går til tone: “Eg er så glad kvar julekveld”, helst den danske tonen.":
+    "Går til tone: «Eg er så glad kvar julekveld», helst den danske tonen.",
+  "Eg trur sangen kan gå til tone: «Det lyser i stille grender.» 14.11.1999.":
+    "Går til tone: «Det lyser i stille grender». 14.11.1999.",
+  "Kan gå til tone: “Namnet Jesus”.": "Går til tone: «Namnet Jesus».",
 };
 
 function getWorkMetadata(groupId: string, title: string) {
@@ -232,19 +253,33 @@ function getMetadataDisplayText(text: string) {
 export async function getDikt() {
   const [firstPage, ...pages] = await getKapittelPages(24);
   const lines = (blocks: ArchiveBlock[]) =>
-    blocks.flatMap((block) => (block.type === "paragraph" && block.text.trim() ? [block.text.trim()] : []));
+    blocks.flatMap((block) =>
+      block.type === "paragraph" && block.text.trim()
+        ? [block.text.trim()]
+        : [],
+    );
 
   const [adventTitle, ...adventLines] = lines(firstPage.blocks.slice(1));
-  const dikt = [{ title: adventTitle, lines: adventLines.slice(0, adventLines.findIndex(isDiktTitle)), metadata: [] as string[] }];
+  const dikt = [
+    {
+      title: adventTitle,
+      lines: adventLines.slice(0, adventLines.findIndex(isDiktTitle)),
+      metadata: [] as string[],
+    },
+  ];
 
   for (const page of pages) {
     for (const line of lines(page.blocks)) {
       if (line === "RIM") continue;
-      if (isDiktTitle(line)) dikt.push({ title: line, lines: [], metadata: [] });
+      if (isDiktTitle(line))
+        dikt.push({ title: line, lines: [], metadata: [] });
       else {
         const current = dikt.at(-1);
         if (!current) continue;
-        if (getWorkMetadata("rim", formatDiktTitle(current.title)).includes(line)) current.metadata.push(getMetadataDisplayText(line));
+        if (
+          getWorkMetadata("rim", formatDiktTitle(current.title)).includes(line)
+        )
+          current.metadata.push(getMetadataDisplayText(line));
         else current.lines.push(line);
       }
     }
@@ -262,20 +297,50 @@ export async function getDikt() {
 }
 
 const writtenWorkGroups = [
-  { id: "prologar", title: "Prologar", chapter: 23, indexPage: "kap23--prologar", marker: "PROLOGAR" },
+  {
+    id: "prologar",
+    title: "Prologar",
+    chapter: 23,
+    indexPage: "kap23--prologar",
+    marker: "PROLOGAR",
+  },
   { id: "rim", title: "Rim", chapter: 24, indexPage: "", marker: "RIM" },
-  { id: "hoegtider", title: "Høgtider", chapter: 25, indexPage: "", marker: "HØGTIDER" },
-  { id: "minneord", title: "Minneord", chapter: 26, indexPage: "kap26--minneord", marker: "MINNEORD" },
-  { id: "bankar", title: "Bankar", chapter: 27, indexPage: "kap-27--bankar", marker: "BANKAR" },
+  {
+    id: "hoegtider",
+    title: "Høgtider",
+    chapter: 25,
+    indexPage: "",
+    marker: "HØGTIDER",
+  },
+  {
+    id: "minneord",
+    title: "Minneord",
+    chapter: 26,
+    indexPage: "kap26--minneord",
+    marker: "MINNEORD",
+  },
+  {
+    id: "bankar",
+    title: "Bankar",
+    chapter: 27,
+    indexPage: "kap-27--bankar",
+    marker: "BANKAR",
+  },
 ] as const;
 
-function parseWrittenWorks(pages: ArchivePage[], group: (typeof writtenWorkGroups)[number]) {
+function parseWrittenWorks(
+  pages: ArchivePage[],
+  group: (typeof writtenWorkGroups)[number],
+) {
   const parsed: Dikt[] = [];
 
   for (const page of pages) {
     if (page.slug === group.indexPage) continue;
-    let lines = page.blocks
-      .flatMap((block) => (block.type === "paragraph" && block.text.trim() ? [block.text.trim()] : []));
+    let lines = page.blocks.flatMap((block) =>
+      block.type === "paragraph" && block.text.trim()
+        ? [block.text.trim()]
+        : [],
+    );
 
     // The Høgtider index stores its table of contents before the first poem.
     if (page.slug === "kap25--hoegtider") lines = lines.slice(2);
@@ -290,9 +355,15 @@ function parseWrittenWorks(pages: ArchivePage[], group: (typeof writtenWorkGroup
       if (isDiktTitle(line)) {
         saveCurrent();
         const title = formatDiktTitle(line);
-        current = { id: `${group.id}-${makeSectionId(title)}`, title, lines: [], metadata: [] };
+        current = {
+          id: `${group.id}-${makeSectionId(title)}`,
+          title,
+          lines: [],
+          metadata: [],
+        };
       } else if (current) {
-        if (getWorkMetadata(group.id, current.title).includes(line)) current.metadata?.push(getMetadataDisplayText(line));
+        if (getWorkMetadata(group.id, current.title).includes(line))
+          current.metadata?.push(getMetadataDisplayText(line));
         else current.lines.push(line);
       }
     }
@@ -305,9 +376,15 @@ function parseWrittenWorks(pages: ArchivePage[], group: (typeof writtenWorkGroup
     const existing = unique.get(item.id);
     if (!existing) unique.set(item.id, item);
     else {
-      const preferred = item.lines.length > existing.lines.length ? item : existing;
-      const metadata = [...new Set([...(existing.metadata ?? []), ...(item.metadata ?? [])])];
-      unique.set(item.id, { ...preferred, ...(metadata.length > 0 ? { metadata } : {}) });
+      const preferred =
+        item.lines.length > existing.lines.length ? item : existing;
+      const metadata = [
+        ...new Set([...(existing.metadata ?? []), ...(item.metadata ?? [])]),
+      ];
+      unique.set(item.id, {
+        ...preferred,
+        ...(metadata.length > 0 ? { metadata } : {}),
+      });
     }
   }
   return [...unique.values()];
@@ -317,10 +394,16 @@ export async function getWrittenWorkGroups(): Promise<WrittenWorkGroup[]> {
   return Promise.all(
     writtenWorkGroups.map(async (group) => {
       const pages = await getKapittelPages(group.chapter);
-      const items = group.id === "rim"
-        ? (await getDikt()).map((item) => ({ ...item, id: `rim-${item.id}` }))
-        : parseWrittenWorks(pages, group);
-      return { id: group.id, title: group.title, chapter: group.chapter, items };
+      const items =
+        group.id === "rim"
+          ? (await getDikt()).map((item) => ({ ...item, id: `rim-${item.id}` }))
+          : parseWrittenWorks(pages, group);
+      return {
+        id: group.id,
+        title: group.title,
+        chapter: group.chapter,
+        items,
+      };
     }),
   );
 }

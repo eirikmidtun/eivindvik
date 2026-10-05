@@ -8,9 +8,8 @@ import { KapittelBiletegalleri } from "../../components/KapittelBiletegalleri";
 import { KapittelNav } from "../../components/KapittelNav";
 import { KapittelSidebar } from "../../components/KapittelSidebar";
 import { KapittelText } from "../../components/KapittelText";
-import { LandscapeBand } from "../../components/LandscapeBand";
 import { PageHero } from "../../components/PageHero";
-import { author, hero, readableKapitler, landscape, siteName, siteUrl, temaer } from "../../content";
+import { author, hero, readableKapitler, siteName, siteUrl, temaer } from "../../content";
 
 export const dynamicParams = false;
 
@@ -116,7 +115,6 @@ export default async function KapittelPage({ params }: PageProps<"/kapittel/[slu
           </div>
         </div>
       </main>
-      <LandscapeBand image={landscape} />
       <Footer />
     </>
   );

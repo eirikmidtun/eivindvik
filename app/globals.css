@@ -141,8 +141,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .tema-card-description { margin-bottom: 12px; color: var(--muted); font-size: 14px; line-height: 1.45; }
 .tema-card .arrow-icon { margin-top: auto; color: var(--accent); }
 
-.landscape-band { position: relative; height: clamp(180px, 22vw, 300px); }
-.landscape-band img { object-fit: cover; object-position: center 78%; }
 
 /* Kapittel index */
 
@@ -343,9 +341,9 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 /* Editorial chapter layout */
 .page-hero-banner { min-height: 184px; }
-/* Same box and focal point as the home hero, cut off at the banner's bottom edge. */
-.page-hero-banner .page-hero-image { height: 500px !important; bottom: auto !important; object-position: center 78%; }
-.page-hero-banner::before { background: linear-gradient(180deg, rgb(245 242 234 / 94%) 0%, rgb(245 242 234 / 68%) 72%, rgb(245 242 234 / 18%) 100%); }
+/* Shows the shoreline and sea from the bottom of the home hero photo. */
+.page-hero-banner .page-hero-image { object-position: center 85%; }
+.page-hero-banner::before { background: linear-gradient(180deg, rgb(245 242 234 / 92%) 0%, rgb(245 242 234 / 55%) 55%, rgb(245 242 234 / 0%) 100%); }
 
 .kapittel-layout { width: min(100% - var(--gutter) * 2, 1440px); margin: 0 auto; padding: 30px 0 72px; display: grid; grid-template-columns: 224px minmax(0, 1fr); align-items: start; gap: clamp(36px, 5vw, 76px); }
 .kapittel-sidebar { position: sticky; top: 24px; max-height: calc(100vh - 48px); overflow-y: auto; padding: 12px 8px 20px 0; scrollbar-width: thin; }
@@ -422,7 +420,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 @media (max-width: 520px) {
   .page-hero-banner { min-height: 196px; }
-  .page-hero-banner .page-hero-image { height: 460px !important; }
   .kapittel-layout { padding-bottom: 48px; }
   .kapittel-page-heading h1 { font-size: 43px; }
   .kapittel-gallery { grid-template-columns: 1fr; gap: 18px; }

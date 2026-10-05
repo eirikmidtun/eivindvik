@@ -4,7 +4,6 @@ import { Footer } from "./components/Footer";
 import { HomeHero } from "./components/HomeHero";
 import { JsonLd } from "./components/JsonLd";
 import { KorsSection } from "./components/KorsSection";
-import { LandscapeBand } from "./components/LandscapeBand";
 import { TemaSection } from "./components/TemaSection";
 import { TusenaarsstadSection } from "./components/TusenaarsstadSection";
 import {
@@ -13,7 +12,6 @@ import {
   hero,
   kors,
   korsIntro,
-  landscape,
   siteName,
   siteUrl,
   temaer,
@@ -54,7 +52,6 @@ export default function HomePage() {
         <KorsSection {...korsIntro} kors={kors} />
         <TemaSection {...utforsk} temaer={temaer} />
         <AuthorSection {...authorIntro} name={author} />
-        <LandscapeBand image={landscape} />
       </main>
       <Footer />
     </>
