@@ -1,0 +1,423 @@
+{
+  "slug": "kap25--prolog32",
+  "sourceUrl": "http://privat.enivest.net/~magnor.midtun/Kap25/prolog32.htm",
+  "sourcePath": "Kap25/prolog32.htm",
+  "chapterNumber": 25,
+  "title": "Prolog32",
+  "documentTitle": "Prolog32",
+  "text": "HØGTIDER\n\nJULEFERIE\n\nNo er jula her snart,\n\nalt i kveld får ho sin start,\n\nnår born og svigerborn kjem\n\nog borneborn med kos og klem.\n\nHender vinkar i takt,\n\nlandgang frå båten vert lagt,\n\naugo dei tindrar,\n\nog ingen ting hindrar\n\nfoten liten, lett og snar,\n\nila over kaia mot bestefar\n\nsom ventar med sin gamle bil\n\nog tek imot med klapp og smil.\n\nSå ber det, nett som ifjor,\n\ntil hjarteleg velkomst hos bestemor.\n\nI stova, varm og god\n\nglad med maten ventar ho.\n\nÅ kor godt det smaka,\n\nog alt som ho har baka !\n\nOg slik som ho har pynta då !\n\nDet skin i kvar ei krå.\n\nUngane kan ikkje styre seg,\n\ni heile huset rundt dei dreg,\n\nkvar krok kjenner dei att,\n\nveit kvar dei skal sove i natt.\n\nDei skal i 14 fine feriedagar\n\nnyta maten bestemor lagar,\n\nlyda til soger om fuglar og dyr,\n\nhuldrer, nissar og spanande eventyr,\n\nhøyra bodskapet om guten som\n\njulekvelden til frelse for menneska kom,\n\nom hyrdingar og om vise menn som kjem\n\nmed røykelse og myrra til barnet i Betlehem.\n\nDei gler seg også til å få vera med\n\nbestefar i skogen etter juletre.\n\nOg pynta treet vil dei svært så gjerne\n\nmed lys, glitter og ei vakker stjerne.\n\nMange pakkar, store og små,\n\ndei håpefulle ventar på.\n\nDei pratar seg varme og håplaust spente,\n\nser mest inga råd med å vente !\n\nMen med leik og spel dagane gjekk\n\nog så mykje kjekt dei oppleva fekk\n\nat tida faktisk fauk av garde,\n\nså slett ikkje lenge det varde\n\nfør kvelden kom\n\nmed alt det dei drøymde om.\n\nMed fine festklede\n\ni fryd og glede\n\nfamilien seg sessa\n\ni kyrkja på julemessa\n\ntil djup, malmfull klokkeklang,\n\ngode ord, musikk og sang.\n\nHeime festbordet med lys og stas,\n\netter at bestefar evangeliet las,\n\nbaud massevis av framifrå julemat\n\npå betemor sine aller finaste fat.\n\nI stor spenning alle fram dei såg\n\nmot opning av pakkane som under treet låg.\n\nOg her kom det fram dei underlegaste ting,\n\ntog som på skjener gjekk i ring,\n\nbilar som kunne styrast omkring,\n\nmed revers og sving,\n\ndyr og fuglar, nissar som dansa og lo,\n\nnyttige reiskap, gromme klede og sko.\n\nNissen kom også på besøk\n\nmed mykje lått, song og spøk.\n\nJa, det vart litt av eit liv\n\nog eit tidsfordriv\n\nogså i dagane framover,\n\nbåde i og utanfor bestemor sine stover.\n\nOm sider tok julefesten slutt.\n\nEtter nyttåret sin sprakande salutt\n\nsmå og store måtte julegåvene pakke,\n\nfor ein hyggeleg juleferie takke,\n\nog så ein kveld reisa på same måten\n\nsom dei kom - med ekspressbåten.\n\nDei gamle vinkande på tunet står,\n\nynskjer god tur og vel møtt neste år.\n\nI huset vart det så stille\n\nat ein kunne høyre ei tåre trille.",
+  "wordCount": 463,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "HØGTIDER",
+      "html": "HØGTIDER"
+    },
+    {
+      "type": "paragraph",
+      "text": "JULEFERIE",
+      "html": "<b><font face=\"Times New Roman\" size=\"4\">JULEFERIE</font></b>"
+    },
+    {
+      "type": "paragraph",
+      "text": "No er jula her snart,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">No er jula her snart,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "alt i kveld får ho sin start,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">alt i kveld får ho sin start,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "når born og svigerborn kjem",
+      "html": "<font face=\"Times New Roman\" size=\"4\">når born og svigerborn kjem</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "og borneborn med kos og klem.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">og borneborn med kos og klem.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hender vinkar i takt,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Hender vinkar i takt,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "landgang frå båten vert lagt,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">landgang frå båten vert lagt,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "augo dei tindrar,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">augo dei tindrar,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "og ingen ting hindrar",
+      "html": "<font face=\"Times New Roman\" size=\"4\">og ingen ting hindrar </font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "foten liten, lett og snar,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">foten liten, lett og snar,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "ila over kaia mot bestefar",
+      "html": "<font face=\"Times New Roman\" size=\"4\">ila over kaia mot bestefar</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "som ventar med sin gamle bil",
+      "html": "<font face=\"Times New Roman\" size=\"4\">som ventar med sin gamle bil</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "og tek imot med klapp og smil.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">og tek imot med klapp og smil.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Så ber det, nett som ifjor,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Så ber det, nett som ifjor,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "til hjarteleg velkomst hos bestemor.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">til hjarteleg velkomst hos bestemor.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "I stova, varm og god",
+      "html": "<font face=\"Times New Roman\" size=\"4\">I stova, varm og god</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "glad med maten ventar ho.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">glad med maten ventar ho.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Å kor godt det smaka,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Å kor godt det smaka,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "og alt som ho har baka !",
+      "html": "<font face=\"Times New Roman\" size=\"4\">og alt som ho har baka !</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Og slik som ho har pynta då !",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Og slik som ho har pynta då !</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Det skin i kvar ei krå.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Det skin i kvar ei krå.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ungane kan ikkje styre seg,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Ungane kan ikkje styre seg,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "i heile huset rundt dei dreg,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">i heile huset rundt dei dreg,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "kvar krok kjenner dei att,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">kvar krok kjenner dei att,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "veit kvar dei skal sove i natt.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">veit kvar dei skal sove i natt.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dei skal i 14 fine feriedagar",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Dei skal i 14 fine feriedagar</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "nyta maten bestemor lagar,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">nyta maten bestemor lagar,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "lyda til soger om fuglar og dyr,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">lyda til soger om fuglar og dyr,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "huldrer, nissar og spanande eventyr,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">huldrer, nissar og spanande eventyr,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "høyra bodskapet om guten som",
+      "html": "<font face=\"Times New Roman\" size=\"4\">høyra bodskapet om guten som</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "julekvelden til frelse for menneska kom,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">julekvelden til frelse for menneska \n      kom,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "om hyrdingar og om vise menn som kjem",
+      "html": "<font face=\"Times New Roman\" size=\"4\">om hyrdingar og om vise menn som \n      kjem</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "med røykelse og myrra til barnet i Betlehem.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">med røykelse og myrra til barnet i \n      Betlehem.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dei gler seg også til å få vera med",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Dei gler seg også til å få vera med</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "bestefar i skogen etter juletre.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">bestefar i skogen etter juletre.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Og pynta treet vil dei svært så gjerne",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Og pynta treet vil dei svært så \n      gjerne</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "med lys, glitter og ei vakker stjerne.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">med lys, glitter og ei vakker \n      stjerne.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mange pakkar, store og små,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Mange pakkar, store og små,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "dei håpefulle ventar på.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">dei håpefulle ventar på.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dei pratar seg varme og håplaust spente,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Dei pratar seg varme og håplaust \n      spente,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "ser mest inga råd med å vente !",
+      "html": "<font face=\"Times New Roman\" size=\"4\">ser mest inga råd med å vente !</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Men med leik og spel dagane gjekk",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Men med leik og spel dagane gjekk</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "og så mykje kjekt dei oppleva fekk",
+      "html": "<font face=\"Times New Roman\" size=\"4\">og så mykje kjekt dei oppleva fekk</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "at tida faktisk fauk av garde,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">at tida faktisk fauk av garde,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "så slett ikkje lenge det varde",
+      "html": "<font face=\"Times New Roman\" size=\"4\">så slett ikkje lenge det varde</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "før kvelden kom",
+      "html": "<font face=\"Times New Roman\" size=\"4\">før kvelden kom </font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "med alt det dei drøymde om.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">med alt det dei drøymde om.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Med fine festklede",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Med fine festklede</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "i fryd og glede",
+      "html": "<font face=\"Times New Roman\" size=\"4\">i fryd og glede</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "familien seg sessa",
+      "html": "<font face=\"Times New Roman\" size=\"4\">familien seg sessa</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "i kyrkja på julemessa",
+      "html": "<font face=\"Times New Roman\" size=\"4\">i kyrkja på julemessa</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "til djup, malmfull klokkeklang,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">til djup, malmfull klokkeklang,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "gode ord, musikk og sang.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">gode ord, musikk og sang.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Heime festbordet med lys og stas,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Heime festbordet med lys og stas,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "etter at bestefar evangeliet las,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">etter at bestefar evangeliet las,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "baud massevis av framifrå julemat",
+      "html": "<font face=\"Times New Roman\" size=\"4\">baud massevis av framifrå julemat</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "på betemor sine aller finaste fat.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">på betemor sine aller finaste fat.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "I stor spenning alle fram dei såg",
+      "html": "<font face=\"Times New Roman\" size=\"4\">I stor spenning alle fram dei såg</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "mot opning av pakkane som under treet låg.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">mot opning av pakkane som under \n      treet låg.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Og her kom det fram dei underlegaste ting,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Og her kom det fram dei underlegaste \n      ting,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "tog som på skjener gjekk i ring,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">tog som på skjener gjekk i ring,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "bilar som kunne styrast omkring,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">bilar som kunne styrast omkring,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "med revers og sving,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">med revers og sving,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "dyr og fuglar, nissar som dansa og lo,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">dyr og fuglar, nissar som dansa og \n      lo,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "nyttige reiskap, gromme klede og sko.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">nyttige reiskap, gromme klede og \n      sko.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Nissen kom også på besøk",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Nissen kom også på besøk</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "med mykje lått, song og spøk.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">med mykje lått, song og spøk.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ja, det vart litt av eit liv",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Ja, det vart litt av eit liv</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "og eit tidsfordriv",
+      "html": "<font face=\"Times New Roman\" size=\"4\">og eit tidsfordriv</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "også i dagane framover,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">også i dagane framover,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "både i og utanfor bestemor sine stover.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">både i og utanfor bestemor sine \n      stover.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Om sider tok julefesten slutt.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Om sider tok julefesten slutt.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Etter nyttåret sin sprakande salutt",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Etter nyttåret sin sprakande salutt</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "små og store måtte julegåvene pakke,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">små og store måtte julegåvene pakke,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "for ein hyggeleg juleferie takke,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">for ein hyggeleg juleferie takke,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "og så ein kveld reisa på same måten",
+      "html": "<font face=\"Times New Roman\" size=\"4\">og så ein kveld reisa på same måten</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "som dei kom - med ekspressbåten.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">som dei kom - med ekspressbåten.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Dei gamle vinkande på tunet står,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Dei gamle vinkande på tunet står,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "ynskjer god tur og vel møtt neste år.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">ynskjer god tur og vel møtt neste \n      år.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "I huset vart det så stille",
+      "html": "<font face=\"Times New Roman\" size=\"4\">I huset vart det så stille</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "at ein kunne høyre ei tåre trille.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">at ein kunne høyre ei tåre trille.</font>"
+    }
+  ],
+  "images": []
+}

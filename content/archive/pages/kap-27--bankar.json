@@ -1,0 +1,48 @@
+{
+  "slug": "kap-27--bankar",
+  "sourceUrl": "http://privat.enivest.net/~magnor.midtun/Kap%2027/Bankar.htm",
+  "sourcePath": "Kap 27/Bankar.htm",
+  "chapterNumber": 27,
+  "title": "Bankar",
+  "documentTitle": "Bankar",
+  "text": "BANKAR\n\nFUNKSJONÆRTREFF I BALESTRAND\n\nINNVIING AV NYTT BANKHUS\n\nGULEN SPAREBANK 100 ÅR\n\nFUSJONSFEST\n\nSPAREBANKEN ASKVOLL 100 ÅR\n\nSPAREBANKEN GAULAR 100 ÅR",
+  "wordCount": 21,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "BANKAR",
+      "html": "BANKAR"
+    },
+    {
+      "type": "paragraph",
+      "text": "FUNKSJONÆRTREFF I BALESTRAND",
+      "html": "<b><a target=\"_self\" href=\"bk1.htm\">FUNKSJONÆRTREFF I BALESTRAND</a></b>"
+    },
+    {
+      "type": "paragraph",
+      "text": "INNVIING AV NYTT BANKHUS",
+      "html": "<b><a target=\"_self\" href=\"bk2.htm\">INNVIING AV NYTT BANKHUS</a></b>"
+    },
+    {
+      "type": "paragraph",
+      "text": "GULEN SPAREBANK 100 ÅR",
+      "html": "<b><a target=\"_self\" href=\"bk3.htm\">GULEN SPAREBANK 100 ÅR</a></b>"
+    },
+    {
+      "type": "paragraph",
+      "text": "FUSJONSFEST",
+      "html": "<b><a target=\"_self\" href=\"bk4.htm\">FUSJONSFEST</a></b>"
+    },
+    {
+      "type": "paragraph",
+      "text": "SPAREBANKEN ASKVOLL 100 ÅR",
+      "html": "<b><a target=\"_self\" href=\"bk5.htm\">SPAREBANKEN ASKVOLL 100 ÅR</a></b>"
+    },
+    {
+      "type": "paragraph",
+      "text": "SPAREBANKEN GAULAR 100 ÅR",
+      "html": "<b><a href=\"bk6.htm\">SPAREBANKEN GAULAR 100 ÅR</a></b>"
+    }
+  ],
+  "images": []
+}

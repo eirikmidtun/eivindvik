@@ -1,0 +1,338 @@
+{
+  "slug": "kap12--prolog8",
+  "sourceUrl": "http://privat.enivest.net/~magnor.midtun/Kap12/Prolog8.htm",
+  "sourcePath": "Kap12/Prolog8.htm",
+  "chapterNumber": 12,
+  "title": "ANDRE VITJINGAR",
+  "documentTitle": "Prolog8",
+  "text": "ANDRE VITJINGAR\n\nVELKOMMEN\n\nTIL REGATTAEN CUTTY SARK\n\nI dag er her liv og stas\n\nmed velforma, flotte båtar\n\nfrå verda sin mest kjende seglas,\n\nmastrer, segl, flagg og fløytelåtar.\n\nEit pust frå den store verd,\n\neit drag frå den stolte klipper,\n\neit glimt frå seglskutetida me ser\n\ni alt det vakre som på bylgjene vipper.\n\nCutty Sark Tall Ships`Race vil tende\n\nsus og stemning «trio heile dagar til ende».\n\nMe veit at gamle, kjende Cutty Sark\n\nsiglde trygt og kvast,\n\ndrog kvikt vegen strak\n\nheim med si dyrebare last.\n\nHo skar avgarde i storm og i bris\n\nmed kinesisk te og australsk ull,\n\nfyrst på marknaden gav god pris\n\nog pengeskuffa til reiaren full.\n\nMange sjømil har ho slukt,\n\nfekk mykje ros, ingen klagar,\n\ndet seiest at til London frå Kinabukt,\n\nslo ho andre skuter med 25 dagar.\n\nSeinare vart ho nytta som skuleskip\n\nder mange sjøfolk vart lærde opp,\n\nkunnskapsrike dei så over hennar rip\n\ngjekk i land etter trening i rigg og topp.\n\nPå museum no ho står,\n\nviser oss sjømannslivet frå innsida,\n\ntankevekkande inntrykk der me får\n\nfrå den harde, men livlige seglskutetida.\n\nTakk til den wisky-produsent\n\nsom sponsar seglasen med hennar namn\n\nog med innsikt og talent\n\nsender seglbåtar frå hamn til hamn.\n\nDenne verdsomfatande konkurransen\n\nder ungdomar frå mange land er med,\n\nstyrkjer brorskap og skjerpar sansen\n\nfor venskap med von om fred.\n\nMe takkar alle deltakarane i Cutty Sark\n\nsom på dykkar lange ferd\n\nover sjø, både stormande, og mak,\n\nla kursen inn til oss her.\n\nHjarteleg velkomne de er !\n\nArtistar, administrasjon og mange fleire,\n\nsom hjelpte, med ord og tanke, sag og drill,\n\npublikum som kjem for å feire,\n\nme også hjarteleg takke vil\n\nog ynskja velkomne her til.\n\nHer kan de nyte susen av soge\n\nfrå gamle Gulating\n\nder vikingar med spjot, pil og boge\n\nsvor eiden over den heilage hovring.\n\nOgså dei på smekre seglskuter kom,\n\ntil samlingane her ved sin heilagdom.\n\nI dag eit nytt minne i vår hug vert lagd,\n\nom båtar, mannskap og sjømannsbragd.\n\nAt de vitjar oss vil me ikkje gløyme,\n\ndagane her vil me i våre tankar gøyme\n\nDen vidare kappseglas,\n\nmed slit, glede og festivitas,\n\nme i media fylgje vil\n\nog ynskjer alle lukke til !",
+  "wordCount": 372,
+  "blocks": [
+    {
+      "type": "heading",
+      "level": 1,
+      "text": "ANDRE VITJINGAR"
+    },
+    {
+      "type": "paragraph",
+      "text": "VELKOMMEN",
+      "html": "<b><font face=\"Times New Roman\">VELKOMMEN</font></b>"
+    },
+    {
+      "type": "paragraph",
+      "text": "TIL REGATTAEN CUTTY SARK",
+      "html": "<b><font face=\"Times New Roman\">TIL REGATTAEN CUTTY \nSARK</font></b>"
+    },
+    {
+      "type": "paragraph",
+      "text": "I dag er her liv og stas",
+      "html": "<font face=\"Times New Roman\" size=\"4\">I dag er her \n      liv og stas</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "med velforma, flotte båtar",
+      "html": "<font face=\"Times New Roman\" size=\"4\">med velforma, \n      flotte båtar</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "frå verda sin mest kjende seglas,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">frå verda sin \n      mest kjende seglas,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "mastrer, segl, flagg og fløytelåtar.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">mastrer, segl, \n      flagg og fløytelåtar.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Eit pust frå den store verd,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Eit pust frå \n      den store verd,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "eit drag frå den stolte klipper,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">eit drag frå \n      den stolte klipper,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "eit glimt frå seglskutetida me ser",
+      "html": "<font face=\"Times New Roman\" size=\"4\">eit glimt frå \n      seglskutetida me ser</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "i alt det vakre som på bylgjene vipper.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">i alt det vakre \n      som på bylgjene vipper.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Cutty Sark Tall Ships`Race vil tende",
+      "html": "<font face=\"Times New Roman\" size=\"4\">\n      <span lang=\"EN-GB\">Cutty Sark Tall Ships`Race vil tende</span></font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "sus og stemning «trio heile dagar til ende».",
+      "html": "<font face=\"Times New Roman\" size=\"4\">sus og stemning \n      «trio heile dagar til ende».</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Me veit at gamle, kjende Cutty Sark",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Me veit at \n      gamle, kjende Cutty Sark</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "siglde trygt og kvast,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">siglde trygt og \n      kvast,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "drog kvikt vegen strak",
+      "html": "<font face=\"Times New Roman\" size=\"4\">drog kvikt \n      vegen strak</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "heim med si dyrebare last.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">heim med si \n      dyrebare last.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Ho skar avgarde i storm og i bris",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Ho skar avgarde \n      i storm og i bris</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "med kinesisk te og australsk ull,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">med kinesisk te \n      og australsk ull,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "fyrst på marknaden gav god pris",
+      "html": "<font face=\"Times New Roman\" size=\"4\">fyrst på \n      marknaden gav god pris</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "og pengeskuffa til reiaren full.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">og pengeskuffa \n      til reiaren full.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Mange sjømil har ho slukt,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Mange sjømil \n      har ho slukt,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "fekk mykje ros, ingen klagar,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">fekk mykje ros, \n      ingen klagar,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "det seiest at til London frå Kinabukt,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">det seiest at \n      til London frå Kinabukt,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "slo ho andre skuter med 25 dagar.",
+      "html": "<span style=\"font-family: Times New Roman; letter-spacing: -.15pt\">\n      <font size=\"4\">slo ho andre skuter med 25 dagar.</font></span>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Seinare vart ho nytta som skuleskip",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Seinare vart ho \n      nytta som skuleskip</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "der mange sjøfolk vart lærde opp,",
+      "html": "<span style=\"font-family: Times New Roman; letter-spacing: -.15pt\">\n      <font size=\"4\">der mange sjøfolk vart lærde opp,</font></span>"
+    },
+    {
+      "type": "paragraph",
+      "text": "kunnskapsrike dei så over hennar rip",
+      "html": "<font face=\"Times New Roman\" size=\"4\">kunnskapsrike dei så over hennar \n      rip&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; </font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "gjekk i land etter trening i rigg og topp.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">gjekk i land \n      etter trening i rigg og topp.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "På museum no ho står,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">På museum no ho \n      står,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "viser oss sjømannslivet frå innsida,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">viser oss \n      sjømannslivet frå innsida,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "tankevekkande inntrykk der me får",
+      "html": "<font face=\"Times New Roman\" size=\"4\">tankevekkande \n      inntrykk der me får</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "frå den harde, men livlige seglskutetida.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">frå den harde, \n      men livlige seglskutetida.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Takk til den wisky-produsent",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Takk til den \n      wisky-produsent</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "som sponsar seglasen med hennar namn",
+      "html": "<font face=\"Times New Roman\" size=\"4\">som sponsar \n      seglasen med hennar namn</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "og med innsikt og talent",
+      "html": "<font face=\"Times New Roman\" size=\"4\">og med innsikt \n      og talent</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "sender seglbåtar frå hamn til hamn.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">sender \n      seglbåtar frå hamn til hamn.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Denne verdsomfatande konkurransen",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Denne \n      verdsomfatande konkurransen</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "der ungdomar frå mange land er med,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">der ungdomar \n      frå mange land er med,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "styrkjer brorskap og skjerpar sansen",
+      "html": "<font face=\"Times New Roman\" size=\"4\">styrkjer \n      brorskap og skjerpar sansen</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "for venskap med von om fred.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">for venskap med \n      von om fred.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Me takkar alle deltakarane i Cutty Sark",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Me takkar alle \n      deltakarane i Cutty Sark</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "som på dykkar lange ferd",
+      "html": "<font face=\"Times New Roman\" size=\"4\">som&nbsp; på dykkar \n      lange ferd</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "over sjø, både stormande, og mak,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">over sjø, både \n      stormande, og mak,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "la kursen inn til oss her.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">la kursen inn \n      til oss her.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Hjarteleg velkomne de er !",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Hjarteleg \n      velkomne de er !</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Artistar, administrasjon og mange fleire,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Artistar, \n      administrasjon og mange fleire,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "som hjelpte, med ord og tanke, sag og drill,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">som hjelpte, \n      med ord og tanke, sag og drill,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "publikum som kjem for å feire,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">publikum som \n      kjem for å feire,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "me også hjarteleg takke vil",
+      "html": "<font face=\"Times New Roman\" size=\"4\">me også \n      hjarteleg takke vil</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "og ynskja velkomne her til.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">og ynskja \n      velkomne her til.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Her kan de nyte susen av soge",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Her kan de nyte \n      susen av soge</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "frå gamle Gulating",
+      "html": "<font face=\"Times New Roman\" size=\"4\">frå gamle \n      Gulating</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "der vikingar med spjot, pil og boge",
+      "html": "<font face=\"Times New Roman\" size=\"4\">der vikingar \n      med spjot, pil og boge</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "svor eiden over den heilage hovring.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">svor eiden over \n      den heilage hovring.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Også dei på smekre seglskuter kom,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Også dei på \n      smekre seglskuter kom,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "til samlingane her ved sin heilagdom.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">til samlingane \n      her ved sin heilagdom.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "I dag eit nytt minne i vår hug vert lagd,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">I dag eit nytt \n      minne i vår hug vert lagd,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "om båtar, mannskap og sjømannsbragd.",
+      "html": "<font face=\"Times New Roman\" size=\"4\">om båtar, \n      mannskap og sjømannsbragd.</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "At de vitjar oss vil me ikkje gløyme,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">At de vitjar \n      oss vil me ikkje gløyme,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "dagane her vil me i våre tankar gøyme",
+      "html": "<font face=\"Times New Roman\" size=\"4\">dagane her vil \n      me i våre tankar gøyme</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "Den vidare kappseglas,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">Den vidare \n      kappseglas,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "med slit, glede og festivitas,",
+      "html": "<font face=\"Times New Roman\" size=\"4\">med slit, glede \n      og festivitas,</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "me i media fylgje vil",
+      "html": "<font face=\"Times New Roman\" size=\"4\">me i media \n      fylgje vil</font>"
+    },
+    {
+      "type": "paragraph",
+      "text": "og ynskjer alle lukke til !",
+      "html": "<font face=\"Times New Roman\" size=\"4\">og ynskjer alle \n      lukke til !</font>"
+    }
+  ],
+  "images": []
+}

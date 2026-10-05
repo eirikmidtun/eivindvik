@@ -1,0 +1,43 @@
+{
+  "slug": "kap26--minneord",
+  "sourceUrl": "http://privat.enivest.net/~magnor.midtun/Kap26/Minneord.htm",
+  "sourcePath": "Kap26/Minneord.htm",
+  "chapterNumber": 26,
+  "title": "Minneord",
+  "documentTitle": "Minneord",
+  "text": "MINNEORD\n\nRAGNHILD\n\nBERNT STENDAL\n\nSØREN RANDAL\n\nARVID NYHAMMER\n\nDRUKNING - ETTERORD",
+  "wordCount": 11,
+  "blocks": [
+    {
+      "type": "paragraph",
+      "text": "MINNEORD",
+      "html": "<b><font size=\"4\">MINNEORD</font></b>"
+    },
+    {
+      "type": "paragraph",
+      "text": "RAGNHILD",
+      "html": "<b><a target=\"_self\" href=\"mo1.htm\">RAGNHILD</a></b>"
+    },
+    {
+      "type": "paragraph",
+      "text": "BERNT STENDAL",
+      "html": "<b><a target=\"_self\" href=\"mo2.htm\">BERNT STENDAL</a></b>"
+    },
+    {
+      "type": "paragraph",
+      "text": "SØREN RANDAL",
+      "html": "<b><a target=\"_self\" href=\"mo3.htm\">SØREN RANDAL</a></b>"
+    },
+    {
+      "type": "paragraph",
+      "text": "ARVID NYHAMMER",
+      "html": "<b><a target=\"_self\" href=\"mo4.htm\">ARVID NYHAMMER</a></b>"
+    },
+    {
+      "type": "paragraph",
+      "text": "DRUKNING - ETTERORD",
+      "html": "<b><a target=\"_self\" href=\"mo5.htm\">DRUKNING - ETTERORD</a></b>"
+    }
+  ],
+  "images": []
+}
