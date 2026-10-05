@@ -2,22 +2,22 @@ import type { Metadata } from "next";
 import { AuthorSection } from "./components/AuthorSection";
 import { Footer } from "./components/Footer";
 import { HomeHero } from "./components/HomeHero";
-import { IntroSection } from "./components/IntroSection";
 import { JsonLd } from "./components/JsonLd";
 import { KorsSection } from "./components/KorsSection";
 import { LandscapeBand } from "./components/LandscapeBand";
 import { TemaSection } from "./components/TemaSection";
+import { TusenaarsstadSection } from "./components/TusenaarsstadSection";
 import {
   author,
   authorIntro,
   hero,
-  intro,
   kors,
   korsIntro,
   landscape,
   siteName,
   siteUrl,
   temaer,
+  tusenaarsstad,
   utforsk,
 } from "./content";
 
@@ -50,7 +50,7 @@ export default function HomePage() {
       />
       <main>
         <HomeHero {...hero} />
-        <IntroSection {...intro} />
+        <TusenaarsstadSection {...tusenaarsstad} />
         <KorsSection {...korsIntro} kors={kors} />
         <TemaSection {...utforsk} temaer={temaer} />
         <AuthorSection {...authorIntro} name={author} />

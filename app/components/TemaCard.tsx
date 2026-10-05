@@ -10,7 +10,7 @@ type TemaCardProps = {
 
 export function TemaCard({ tema, index }: TemaCardProps) {
   return (
-    <Link className="tema-card" href={`/kapittel#${tema.id}`}>
+    <Link className="tema-card" href={`/kapittel/${tema.kapitler[0].slug}`}>
       <Image
         className="tema-card-image"
         src={tema.image.src}

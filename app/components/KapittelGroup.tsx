@@ -15,9 +15,12 @@ export function KapittelGroup({ tema }: KapittelGroupProps) {
       <ol className="kapittel-list">
         {tema.kapitler.map((kapittel) => (
           <li key={kapittel.number}>
-            <Link href={`/kapittel/${kapittel.slug}`}>
+            <Link href={kapittel.movedTo?.href ?? `/kapittel/${kapittel.slug}`}>
               <span className="kapittel-number">{String(kapittel.number).padStart(2, "0")}</span>
               <span>{kapittel.title}</span>
+              {kapittel.movedTo ? (
+                <span className="kapittel-moved">Ligg under {kapittel.movedTo.label}</span>
+              ) : null}
               <span className="kapittel-arrow" aria-hidden="true">→</span>
             </Link>
           </li>

@@ -18,7 +18,11 @@ export type Kapittel = {
   number: number;
   title: string;
   slug: string;
+  // Set when the chapter is read on another page instead of /kapittel/[slug].
+  movedTo?: NavLink;
 };
+
+const writtenWorksLink: NavLink = { href: "/dikt-og-tekstar", label: "Dikt og tekstar" };
 
 export type Tema = {
   id: string;
@@ -122,11 +126,11 @@ export const temaer: Tema[] = [
     kapitler: [
       { number: 21, title: "Gulatingminne", slug: "gulatingminne" },
       { number: 22, title: "Tankar", slug: "tankar" },
-      { number: 23, title: "Prologar", slug: "prologar" },
-      { number: 24, title: "Rim", slug: "rim" },
-      { number: 25, title: "Høgtider", slug: "hoegtider" },
-      { number: 26, title: "Minneord", slug: "minneord" },
-      { number: 27, title: "Bankar", slug: "bankar" },
+      { number: 23, title: "Prologar", slug: "prologar", movedTo: writtenWorksLink },
+      { number: 24, title: "Rim", slug: "rim", movedTo: writtenWorksLink },
+      { number: 25, title: "Høgtider", slug: "hoegtider", movedTo: writtenWorksLink },
+      { number: 26, title: "Minneord", slug: "minneord", movedTo: writtenWorksLink },
+      { number: 27, title: "Bankar", slug: "bankar", movedTo: writtenWorksLink },
     ],
   },
 ];
@@ -139,6 +143,9 @@ export const kapitler = temaer.flatMap((tema) =>
   })),
 );
 
+// Chapters with their own page under /kapittel/[slug].
+export const readableKapitler = kapitler.filter((kapittel) => !kapittel.movedTo);
+
 export const readLink: NavLink = {
   href: `/kapittel/${kapitler[0].slug}`,
   label: "Les historia",
@@ -148,7 +155,7 @@ export const readLink: NavLink = {
 export const navLinks: NavLink[] = [
   { href: "/", label: "Heim" },
   { href: "/kapittel", label: "Kapittel" },
-  { href: "/dikt-og-tekstar", label: "Dikt og tekstar" },
+  writtenWorksLink,
   { href: "/om-oss", label: "Om oss" },
 ];
 
@@ -164,25 +171,27 @@ export const hero = {
   },
 };
 
-export const kapittelIndexHero: ImageAsset = {
-  src: "/archive/kap01/eivindvik-1938-2.jpg",
-  alt: "Eivindvik sett frå Fonnøya i 1938",
-  width: 631,
-  height: 369,
-};
-
-export const intro = {
-  eyebrow: "To krossar i eit storslått landskap",
-  title: "Eit møtepunkt gjennom tidene",
-  text: "Krossane i Eivindvik står framleis i det same landskapet som har bunde folk saman i generasjonar – ved fjorden, langs ferdselsleier og mellom gardar og grender. Her møtest historia, naturen og kvardagslivet.",
+export const tusenaarsstad = {
+  eyebrow: "Tusenårsstaden Gulatinget",
+  title: "Eit minne etter hundre år",
+  text: "I over hundre år drøfta folk korleis Gulatinget skulle minnast. I 1999 vart Gulatinget valt til tusenårsstad for Sogn og Fjordane, og 27. august 2005 vart Tusenårsstaden opna på Flolid, med steinsøyler og skulpturar av Bård Breivik. Kring 2000 menneske kom til opninga, og Magnor Midtun las prolog.",
+  verse: [
+    "På Gulatinget sine vollar,",
+    "i ly av øyar og runde kollar,",
+    "vart bygt opp eit demokrati",
+    "av så stor verdi",
+    "at lærde folk seier no,",
+    "her norsk folkestyre si vogge stod.",
+  ],
+  verseSource: "Frå prologen til opninga av Tusenårsstaden, 2005",
+  link: { href: "/kapittel/gulatingminne", label: "Les heile soga om gulatingsminnet" },
   image: {
-    src: "/archive/kap02/kart.jpg",
-    alt: "Handteikna kart frå 1771 over det gamle Evenvig prestegjeld",
-    width: 640,
-    height: 367,
+    src: "/archive/kap21/gudsteneste.jpg",
+    alt: "Gudsteneste på Tusenårsstaden Gulatinget, med kor og publikum framfor dei høge steinsøylene",
+    width: 645,
+    height: 437,
   },
-  caption: "Utsnitt av handteikna kart over området kring Eivindvik.",
-  source: "Kjelde: Kart frå 1771 (utsnitt).",
+  caption: "Gudsteneste på Tusenårsstaden Gulatinget dagen etter opninga i 2005.",
 };
 
 export type Kors = {
@@ -255,9 +264,14 @@ export const kartPage = {
   description:
     "Handteikna kart frå 1771 over det gamle Evenvig prestegjeld, med Eivindvik, gardane og ferdselsleiene kring fjorden i Gulen.",
   text: "Kartet frå 1771 viser det gamle Evenvig prestegjeld slik det vart teikna for meir enn 250 år sidan – med fjorden, gardane og ferdselsleiene som batt bygda saman.",
-  image: intro.image,
-  caption: intro.caption,
-  source: intro.source,
+  image: {
+    src: "/archive/kap02/kart.jpg",
+    alt: "Handteikna kart frå 1771 over det gamle Evenvig prestegjeld",
+    width: 640,
+    height: 367,
+  },
+  caption: "Utsnitt av handteikna kart over området kring Eivindvik.",
+  source: "Kjelde: Kart frå 1771 (utsnitt).",
   link: { href: "/kapittel/namnet", label: "Les om namnet Eivindvik" },
 };
 

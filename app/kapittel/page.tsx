@@ -1,8 +1,9 @@
 import type { Metadata } from "next";
+import Link from "next/link";
 import { Footer } from "../components/Footer";
 import { KapittelGroup } from "../components/KapittelGroup";
 import { PageHero } from "../components/PageHero";
-import { author, kapitler, kapittelIndexHero, siteName, temaer } from "../content";
+import { author, hero, kapitler, siteName, temaer } from "../content";
 
 export const metadata: Metadata = {
   title: "Alle kapittel",
@@ -14,13 +15,17 @@ export default function KapittelIndexPage() {
   return (
     <>
       <main>
-        <PageHero image={kapittelIndexHero} variant="banner" />
+        <PageHero image={hero.image} variant="banner" />
         <header className="kapittel-index-intro written-intro">
           <p className="eyebrow">Lokalhistoriske tekstar</p>
           <h1>{siteName}</h1>
           <p className="written-intro-byline">{kapitler.length} kapittel av {author}</p>
           <p className="written-intro-copy">
             Ei samling tekstar om menneska, stadene og livet i Eivindvik og Gulen. Vel eit kapittel i lista for å lese historia.
+          </p>
+          <p className="written-intro-copy">
+            Kapittel 23 til 27 (Prologar, Rim, Høgtider, Minneord og Bankar) ligg no under{" "}
+            <Link href="/dikt-og-tekstar">Dikt og tekstar</Link>.
           </p>
         </header>
         <div className="kapittel-index section-inner">

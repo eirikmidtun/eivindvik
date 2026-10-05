@@ -24,9 +24,18 @@ function KapittelList({ temaer, currentKapittel, sections }: KapittelSidebarProp
                 const isCurrent = kapittel.slug === currentKapittel.slug;
                 return (
                   <li key={kapittel.slug}>
-                    <Link href={`/kapittel/${kapittel.slug}`} aria-current={isCurrent ? "page" : undefined}>
+                    <Link
+                      href={kapittel.movedTo?.href ?? `/kapittel/${kapittel.slug}`}
+                      className={kapittel.movedTo ? "kapittel-sidebar-moved" : undefined}
+                      aria-current={isCurrent ? "page" : undefined}
+                    >
                       <span className="kapittel-sidebar-number">{String(kapittel.number).padStart(2, "0")}</span>
-                      <span>{kapittel.title}</span>
+                      <span>
+                        {kapittel.title}
+                        {kapittel.movedTo ? (
+                          <span className="kapittel-sidebar-moved-note">Ligg under {kapittel.movedTo.label}</span>
+                        ) : null}
+                      </span>
                     </Link>
                     {isCurrent && sections.length > 0 && (
                       <div className="kapittel-sidebar-toc">

@@ -8,6 +8,11 @@ const nextConfig: NextConfig = {
         destination: "/dikt-og-tekstar",
         permanent: true,
       },
+      {
+        source: "/kapittel/:slug(prologar|rim|hoegtider|minneord|bankar)",
+        destination: "/dikt-og-tekstar",
+        permanent: true,
+      },
     ];
   },
 };

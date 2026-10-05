@@ -122,7 +122,9 @@ export function WrittenWorkReader({ groups, author }: WrittenWorkReaderProps) {
         <p className="visually-hidden" aria-live="polite">
           {activeGroup.title}: {activeWork.title}
         </p>
-        <p className="eyebrow written-work-category">{activeGroup.title}</p>
+        <p className="eyebrow written-work-category">
+          Kapittel {activeGroup.chapter} · {activeGroup.title}
+        </p>
         {activeWork.metadata && activeWork.metadata.length > 0 && (
           <aside className="written-work-metadata" aria-label="Tilleggsinformasjon">
             {activeWork.metadata.map((item) => (
@@ -206,6 +208,7 @@ function WorkIndex({
               aria-expanded={isExpanded}
               onClick={() => onChooseGroup(group)}
             >
+              <span className="written-index-chapter" aria-label={`Kapittel ${group.chapter}`}>{group.chapter}</span>
               <span>{group.title}</span>
               <span className="written-index-count">{group.items.length}</span>
               <span className="written-index-chevron">

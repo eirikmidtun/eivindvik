@@ -15,12 +15,13 @@ export default function KartPage() {
   return (
     <>
       <main>
-        <PageHero image={kartPage.heroImage}>
-          <p className="eyebrow">{kartPage.eyebrow}</p>
-          <h1>{kartPage.title}</h1>
-          <p className="section-text">{kartPage.text}</p>
-        </PageHero>
+        <PageHero image={kartPage.heroImage} variant="banner" />
         <div className="content-page">
+          <header className="written-intro content-page-intro">
+            <p className="eyebrow">{kartPage.eyebrow}</p>
+            <h1>{kartPage.title}</h1>
+            <p className="written-intro-copy">{kartPage.text}</p>
+          </header>
           <CaptionedImage
             image={kartPage.image}
             caption={kartPage.caption}

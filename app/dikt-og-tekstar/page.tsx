@@ -18,7 +18,7 @@ export default async function WrittenWorksPage() {
   return (
     <>
       <main>
-        <PageHero image={writtenWorksPage.heroImage} variant="banner" className="written-works-hero" />
+        <PageHero image={writtenWorksPage.heroImage} variant="banner" />
         <WrittenWorkReader groups={groups} author={author} />
       </main>
       <LandscapeBand image={landscape} />

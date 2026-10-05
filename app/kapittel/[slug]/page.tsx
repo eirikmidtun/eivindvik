@@ -10,15 +10,15 @@ import { KapittelSidebar } from "../../components/KapittelSidebar";
 import { KapittelText } from "../../components/KapittelText";
 import { LandscapeBand } from "../../components/LandscapeBand";
 import { PageHero } from "../../components/PageHero";
-import { author, hero, kapitler, landscape, siteName, siteUrl, temaer } from "../../content";
+import { author, hero, readableKapitler, landscape, siteName, siteUrl, temaer } from "../../content";
 
 export const dynamicParams = false;
 
 export function generateStaticParams() {
-  return kapitler.map((kapittel) => ({ slug: kapittel.slug }));
+  return readableKapitler.map((kapittel) => ({ slug: kapittel.slug }));
 }
 
-function describeKapittel(kapittel: (typeof kapitler)[number], pages: ArchivePage[]) {
+function describeKapittel(kapittel: (typeof readableKapitler)[number], pages: ArchivePage[]) {
   return (
     getKapittelDescription(pages, kapittel.title) ??
     `${kapittel.title} – kapittel ${kapittel.number} i ${siteName}, ${author} si lokalhistoriske samling om Eivindvik og Gulen.`
@@ -26,9 +26,9 @@ function describeKapittel(kapittel: (typeof kapitler)[number], pages: ArchivePag
 }
 
 function findKapittel(slug: string) {
-  const index = kapitler.findIndex((kapittel) => kapittel.slug === slug);
+  const index = readableKapitler.findIndex((kapittel) => kapittel.slug === slug);
   if (index === -1) notFound();
-  return { kapittel: kapitler[index], previous: kapitler[index - 1], next: kapitler[index + 1] };
+  return { kapittel: readableKapitler[index], previous: readableKapitler[index - 1], next: readableKapitler[index + 1] };
 }
 
 export async function generateMetadata({ params }: PageProps<"/kapittel/[slug]">): Promise<Metadata> {

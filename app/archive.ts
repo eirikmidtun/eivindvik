@@ -128,6 +128,7 @@ export type Dikt = {
 export type WrittenWorkGroup = {
   id: string;
   title: string;
+  chapter: number;
   items: Dikt[];
 };
 
@@ -279,7 +280,7 @@ export async function getWrittenWorkGroups(): Promise<WrittenWorkGroup[]> {
       const items = group.id === "rim"
         ? (await getDikt()).map((item) => ({ ...item, id: `rim-${item.id}` }))
         : parseWrittenWorks(pages, group);
-      return { id: group.id, title: group.title, items };
+      return { id: group.id, title: group.title, chapter: group.chapter, items };
     }),
   );
 }
