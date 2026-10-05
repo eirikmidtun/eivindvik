@@ -27,7 +27,7 @@ export function AuthorSection({ eyebrow, name, text, link, image, caption }: Aut
           </ButtonLink>
         </SectionIntro>
       }
-      media={<CaptionedImage image={image} caption={caption} sizes="(max-width: 860px) 100vw, 560px" maxWidth={400} />}
+      media={<CaptionedImage image={image} caption={caption} sizes="(max-width: 860px) 100vw, 600px" maxWidth={600} />}
     />
   );
 }

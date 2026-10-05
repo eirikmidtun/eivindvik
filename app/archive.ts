@@ -122,6 +122,7 @@ export type Dikt = {
   id: string;
   title: string;
   lines: string[];
+  metadata?: string[];
 };
 
 export type WrittenWorkGroup = {
@@ -139,6 +140,51 @@ function formatDiktTitle(text: string) {
   return title.charAt(0).toUpperCase() + title.slice(1);
 }
 
+const writtenWorkMetadata: Record<string, Record<string, string[]>> = {
+  rim: {
+    Bytur: ["Den 10.3.1990"],
+  },
+  prologar: {
+    "Eivindvik år 1000 – 2000": ["Eivindvik, nyttårsafta 1999."],
+    "50-årskonfirmantar i Gulen kyrkje": ["1.9.1996"],
+    "Håkon adelsteinsfostre i gula": ["(1997)"],
+    "Gulen sanitetslag": ["Basar 13.3.1971."],
+    "Gulen sjukeheim": ["Overlevering 1.6.1975."],
+    Utvær: ["150504."],
+    Vatnestemnet: ["Eivindvik Vertshus 25.5.1985."],
+  },
+  hoegtider: {
+    Jolekveld: ["Går til tone: “Eg er så glad kvar julekveld”, helst den danske tonen."],
+    Jul: ["Eg trur sangen kan gå til tone: «Det lyser i stille grender.» 14.11.1999."],
+    Påske: ["Kan gå til tone: “Namnet Jesus”."],
+  },
+  bankar: {
+    "Funksjonærtreff i Balestrand": ["26.9.1992."],
+    "Innviing av nytt bankhus": ["(Bygget vart teke i bruk 11.9.1978.)"],
+    Fusjonsfest: ["I sparebanken Sogn og Fjordane, 8.4.1988."],
+    "Sparebanken Askvoll 100 år": ["24.4.1993."],
+    "Sparebanken Gaular 100 år": ["15.2.1994."],
+  },
+};
+
+const metadataDisplayText: Record<string, string> = {
+  "(1997)": "Skrevet i 1997.",
+  "150504.": "15.05.04.",
+  'Går til tone: “Eg er så glad kvar julekveld”, helst den danske tonen.':
+    'Går til tone: «Eg er så glad kvar julekveld», helst den danske tonen.',
+  'Eg trur sangen kan gå til tone: «Det lyser i stille grender.» 14.11.1999.':
+    'Går til tone: «Det lyser i stille grender». 14.11.1999.',
+  'Kan gå til tone: “Namnet Jesus”.': 'Går til tone: «Namnet Jesus».',
+};
+
+function getWorkMetadata(groupId: string, title: string) {
+  return writtenWorkMetadata[groupId]?.[title] ?? [];
+}
+
+function getMetadataDisplayText(text: string) {
+  return metadataDisplayText[text] ?? text;
+}
+
 // The Rim chapter stores each line as a paragraph and marks every poem with an
 // all-caps title. The first page opens with "Adventstid" and then lists the
 // titles of the other poems, so only its first poem is read from there.
@@ -148,19 +194,29 @@ export async function getDikt() {
     blocks.flatMap((block) => (block.type === "paragraph" && block.text.trim() ? [block.text.trim()] : []));
 
   const [adventTitle, ...adventLines] = lines(firstPage.blocks.slice(1));
-  const dikt = [{ title: adventTitle, lines: adventLines.slice(0, adventLines.findIndex(isDiktTitle)) }];
+  const dikt = [{ title: adventTitle, lines: adventLines.slice(0, adventLines.findIndex(isDiktTitle)), metadata: [] as string[] }];
 
   for (const page of pages) {
     for (const line of lines(page.blocks)) {
       if (line === "RIM") continue;
-      if (isDiktTitle(line)) dikt.push({ title: line, lines: [] });
-      else dikt.at(-1)?.lines.push(line);
+      if (isDiktTitle(line)) dikt.push({ title: line, lines: [], metadata: [] });
+      else {
+        const current = dikt.at(-1);
+        if (!current) continue;
+        if (getWorkMetadata("rim", formatDiktTitle(current.title)).includes(line)) current.metadata.push(getMetadataDisplayText(line));
+        else current.lines.push(line);
+      }
     }
   }
 
-  return dikt.map(({ title, lines }): Dikt => {
+  return dikt.map(({ title, lines, metadata }): Dikt => {
     const formatted = formatDiktTitle(title);
-    return { id: makeSectionId(formatted), title: formatted, lines };
+    return {
+      id: makeSectionId(formatted),
+      title: formatted,
+      lines,
+      ...(metadata.length > 0 ? { metadata } : {}),
+    };
   });
 }
 
@@ -193,9 +249,10 @@ function parseWrittenWorks(pages: ArchivePage[], group: (typeof writtenWorkGroup
       if (isDiktTitle(line)) {
         saveCurrent();
         const title = formatDiktTitle(line);
-        current = { id: `${group.id}-${makeSectionId(title)}`, title, lines: [] };
+        current = { id: `${group.id}-${makeSectionId(title)}`, title, lines: [], metadata: [] };
       } else if (current) {
-        current.lines.push(line);
+        if (getWorkMetadata(group.id, current.title).includes(line)) current.metadata?.push(getMetadataDisplayText(line));
+        else current.lines.push(line);
       }
     }
     saveCurrent();
@@ -205,7 +262,12 @@ function parseWrittenWorks(pages: ArchivePage[], group: (typeof writtenWorkGroup
   const unique = new Map<string, Dikt>();
   for (const item of parsed) {
     const existing = unique.get(item.id);
-    if (!existing || item.lines.length > existing.lines.length) unique.set(item.id, item);
+    if (!existing) unique.set(item.id, item);
+    else {
+      const preferred = item.lines.length > existing.lines.length ? item : existing;
+      const metadata = [...new Set([...(existing.metadata ?? []), ...(item.metadata ?? [])])];
+      unique.set(item.id, { ...preferred, ...(metadata.length > 0 ? { metadata } : {}) });
+    }
   }
   return [...unique.values()];
 }

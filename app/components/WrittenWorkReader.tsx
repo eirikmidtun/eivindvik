@@ -13,9 +13,7 @@ export function WrittenWorkReader({ groups, author }: WrittenWorkReaderProps) {
   const firstGroup = groups.find((group) => group.id === "rim") ?? groups[0];
   const firstWork = firstGroup?.items[0];
   const [activeGroupId, setActiveGroupId] = useState(firstGroup?.id ?? "");
-  const [expandedGroupId, setExpandedGroupId] = useState<string | null>(
-    firstGroup?.id ?? null,
-  );
+  const [expandedGroupId, setExpandedGroupId] = useState<string | null>(null);
   const [activeWorkId, setActiveWorkId] = useState(firstWork?.id ?? "");
   const [showAll, setShowAll] = useState(false);
 
@@ -125,6 +123,13 @@ export function WrittenWorkReader({ groups, author }: WrittenWorkReaderProps) {
           {activeGroup.title}: {activeWork.title}
         </p>
         <p className="eyebrow written-work-category">{activeGroup.title}</p>
+        {activeWork.metadata && activeWork.metadata.length > 0 && (
+          <aside className="written-work-metadata" aria-label="Tilleggsinformasjon">
+            {activeWork.metadata.map((item) => (
+              <p key={`${activeWork.id}-metadata-${item}`}>{item}</p>
+            ))}
+          </aside>
+        )}
         <div className="written-work-heading">
           <span className="written-work-number">
             {String(workIndex + 1).padStart(2, "0")}

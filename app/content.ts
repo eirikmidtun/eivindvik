@@ -233,12 +233,12 @@ export const authorIntro = {
   text: `${author} har skrive og samla det lokalhistoriske stoffet i Eivindvik før og no. Arbeidet byggjer på kjelder, stadkunnskap og ei sterk interesse for historia, landskapet og folket i Eivindvik.`,
   link: { href: "/om-oss", label: `Les meir om ${author}` },
   image: {
-    src: "/archive/_borders/magnor-midtun.jpg",
-    alt: "Magnor Midtun i kvit skjorte står framfor steinkrossen og ein steinmur",
-    width: 350,
-    height: 213,
+    src: "/archive/kap21/prolog-home.jpg",
+    alt: "Magnor Midtun les prolog ved ein talarstol framfor ei forsamling",
+    width: 400,
+    height: 257,
   },
-  caption: "M. Midtun.",
+  caption: "Magnor Midtun les prolog på Gulatingseminaret. Foto: Ukjent.",
 };
 
 export const landscape: ImageAsset = {
@@ -281,8 +281,13 @@ export const omOssPage = {
   title: `${author}`,
   description: `${author} skreiv og samla lokalhistoria om Eivindvik og Gulen. Sida er laga av barnebarnet hans, Eirik Midtun, som eit minne om arbeidet han gjorde.`,
   text: `Mannen som skreiv ned segner, hendingar og minne frå Eivindvik, slik at historia ikkje skulle gå tapt.`,
-  image: authorIntro.image,
-  caption: `${author} framfor steinkrossen.`,
+  image: {
+    src: "/archive/_borders/magnor-midtun.jpg",
+    alt: "Magnor Midtun framfor minnestøtta i Gular",
+    width: 350,
+    height: 213,
+  },
+  caption: `${author} framfor minnestøtta i Gular reist av telefonarbeidarar i frå Gulen. Foto: Ottar Midtun.`,
   sections: [
     {
       title: "Kven han var",
