@@ -110,7 +110,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 .home-hero { min-height: 500px; }
 .home-hero .page-hero-text { padding: 30px 20px 76px; }
-.home-hero .page-hero-image { object-position: center 70%; }
+.home-hero .page-hero-image { object-position: center 78%; }
 .home-hero h1 { font-size: clamp(56px, 9vw, 96px); line-height: 1; }
 .home-hero-subtitle { display: block; font-size: 0.48em; letter-spacing: -0.02em; }
 .home-hero-lead { max-width: 480px; margin: 20px auto 0; color: var(--ink); font-size: 18px; line-height: 1.55; }
@@ -142,7 +142,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .tema-card .arrow-icon { margin-top: auto; color: var(--accent); }
 
 .landscape-band { position: relative; height: clamp(180px, 22vw, 300px); }
-.landscape-band img { object-fit: cover; object-position: center 40%; }
+.landscape-band img { object-fit: cover; object-position: center 78%; }
 
 /* Kapittel index */
 
@@ -344,7 +344,7 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 /* Editorial chapter layout */
 .page-hero-banner { min-height: 184px; }
 /* Same box and focal point as the home hero, cut off at the banner's bottom edge. */
-.page-hero-banner .page-hero-image { height: 500px !important; bottom: auto !important; object-position: center 70%; }
+.page-hero-banner .page-hero-image { height: 500px !important; bottom: auto !important; object-position: center 78%; }
 .page-hero-banner::before { background: linear-gradient(180deg, rgb(245 242 234 / 94%) 0%, rgb(245 242 234 / 68%) 72%, rgb(245 242 234 / 18%) 100%); }
 
 .kapittel-layout { width: min(100% - var(--gutter) * 2, 1440px); margin: 0 auto; padding: 30px 0 72px; display: grid; grid-template-columns: 224px minmax(0, 1fr); align-items: start; gap: clamp(36px, 5vw, 76px); }

@@ -250,12 +250,8 @@ export const authorIntro = {
   caption: "Magnor Midtun les prolog på Gulatingseminaret. Foto: Ukjent.",
 };
 
-export const landscape: ImageAsset = {
-  src: "/archive/_borders/tusenaarsstaden.jpg",
-  alt: "Tusenårsstaden Gulatinget med høge steinsøyler framfor fjell og bjørkeskog",
-  width: 845,
-  height: 281,
-};
+// The band above the footer repeats the bottom of the front page hero photo.
+export const landscape: ImageAsset = hero.image;
 
 export const kartPage = {
   heroImage: hero.image,
