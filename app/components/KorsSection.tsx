@@ -23,7 +23,7 @@ export function KorsSection({ eyebrow, title, text, link, kors }: KorsSectionPro
           {text.split(/\n\s*\n/).map((paragraph) => (
             <p className="section-text kors-intro-paragraph" key={paragraph}>{paragraph}</p>
           ))}
-          <ButtonLink href={link.href} variant="outline">{link.label}</ButtonLink>
+          <ButtonLink href={link.href} variant="text">{link.label}</ButtonLink>
         </SectionIntro>
       }
       media={

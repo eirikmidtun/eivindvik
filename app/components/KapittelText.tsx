@@ -1,5 +1,6 @@
 import Image from "next/image";
-import type { ArchiveBlock, ArchivePage, KapittelSection } from "../archive";
+import { type ArchiveBlock, type ArchivePage, getKapittelDikt, type KapittelSection } from "../archive";
+import { KapittelDikt } from "./KapittelDikt";
 
 type KapittelTextProps = {
   pages: ArchivePage[];
@@ -15,12 +16,21 @@ export function KapittelText({ pages, title, sections, leadImageSources }: Kapit
   const firstParagraph = pages
     .flatMap((page) => page.blocks)
     .find((block) => block.type === "paragraph" && block.text.trim().length > 140);
+  const dikt = getKapittelDikt(pages);
 
   return (
     <div className="kapittel-text">
       {pages.map((page) => (
         <div className="kapittel-part" key={page.slug}>
           {page.blocks.map((block, index) => {
+            const poem = dikt.find(
+              (item) => item.pageSlug === page.slug && index >= item.firstBlock && index <= item.lastBlock,
+            );
+            if (poem) {
+              if (index !== poem.firstBlock) return null;
+              return <KapittelDikt key={index} stanzas={poem.stanzas} title={poem.title} source={poem.source} />;
+            }
+
             const section = sections.find((item) => item.pageSlug === page.slug && item.blockIndex === index);
             const isLead = block === firstParagraph;
             const isLegend = page.slug === "kap03--krossane" && index === 2 && block.type === "paragraph";

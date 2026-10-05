@@ -389,6 +389,13 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .kapittel-text h2 { scroll-margin-top: 28px; margin: 1.65em 0 .55em; font-size: clamp(28px, 3.4vw, 38px); letter-spacing: -.02em; }
 .kapittel-text p { margin-bottom: 1.15em; }
 .kapittel-text .kapittel-lead { color: var(--ink); font-size: 21px; line-height: 1.68; }
+.kapittel-dikt { margin: 2em 0 2.2em; padding-left: 24px; border-left: 2px solid var(--accent); }
+.kapittel-dikt blockquote { margin: 0; }
+.kapittel-text .kapittel-dikt p { margin: 0; color: var(--ink); font-family: var(--font-display); font-size: 20px; font-style: italic; line-height: 1.6; }
+.kapittel-text .kapittel-dikt p + p { margin-top: 1em; }
+.kapittel-text .kapittel-dikt .kapittel-dikt-title { margin-bottom: .6em; font-family: var(--font-ui); font-size: 11px; font-style: normal; letter-spacing: .16em; text-transform: uppercase; }
+.kapittel-dikt-line { display: block; padding-left: 1.5em; text-indent: -1.5em; }
+.kapittel-dikt figcaption { margin-top: 12px; color: var(--muted); font-family: var(--font-ui); font-size: 13px; }
 .kapittel-lead::first-letter { float: left; margin: .02em .13em 0 0; color: var(--accent); font-family: var(--font-display); font-size: 3.5em; line-height: .82; }
 .kapittel-quote { margin: 48px 0 64px; padding: 2px 0 2px 28px; border-left: 3px solid var(--accent); color: var(--ink); }
 .kapittel-quote p { margin-bottom: 12px; font-size: clamp(25px, 3.2vw, 36px); font-style: italic; line-height: 1.32; }

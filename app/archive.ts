@@ -118,6 +118,46 @@ export function getKapittelSections(pages: ArchivePage[], title: string) {
   });
 }
 
+export type KapittelDikt = {
+  pageSlug: string;
+  firstBlock: number;
+  lastBlock: number;
+  stanzas: string[][];
+  title?: string;
+  source?: string;
+};
+
+type KapittelDiktRange = Omit<KapittelDikt, "pageSlug" | "stanzas"> & {
+  // Number of lines in each stanza. The scraper drops stanza breaks, so the
+  // whole poem is one stanza unless this is given.
+  stanzaLengths?: number[];
+};
+
+// Poems quoted inside chapter text, by page slug and block range (inclusive).
+// The scraped lines are separate paragraphs and can't be told apart from short
+// prose or tables reliably, so each poem is listed here by hand.
+const kapittelDikt: Record<string, KapittelDiktRange[]> = {
+  "kap01--innleiing": [{ firstBlock: 9, lastBlock: 12, source: "Frå «Bygda vår»" }],
+};
+
+export function getKapittelDikt(pages: ArchivePage[]): KapittelDikt[] {
+  return pages.flatMap((page) =>
+    (kapittelDikt[page.slug] ?? []).map(({ stanzaLengths, ...range }) => {
+      const lines = page.blocks
+        .slice(range.firstBlock, range.lastBlock + 1)
+        .flatMap((block) => (block.type === "paragraph" && block.text.trim() ? [block.text.trim()] : []));
+      const stanzas: string[][] = [];
+      let start = 0;
+      for (const length of stanzaLengths ?? [lines.length]) {
+        stanzas.push(lines.slice(start, start + length));
+        start += length;
+      }
+      if (start < lines.length) stanzas.push(lines.slice(start));
+      return { ...range, pageSlug: page.slug, stanzas };
+    }),
+  );
+}
+
 export type Dikt = {
   id: string;
   title: string;
