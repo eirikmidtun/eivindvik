@@ -1,0 +1,28 @@
+import type { Metadata } from "next";
+import { getWrittenWorkGroups } from "../archive";
+import { Footer } from "../components/Footer";
+import { LandscapeBand } from "../components/LandscapeBand";
+import { PageHero } from "../components/PageHero";
+import { WrittenWorkReader } from "../components/WrittenWorkReader";
+import { author, landscape, writtenWorksPage } from "../content";
+
+export const metadata: Metadata = {
+  title: "Dikt og tekstar",
+  description: writtenWorksPage.description,
+  alternates: { canonical: "/dikt-og-tekstar" },
+};
+
+export default async function WrittenWorksPage() {
+  const groups = await getWrittenWorkGroups();
+
+  return (
+    <>
+      <main>
+        <PageHero image={writtenWorksPage.heroImage} variant="banner" className="written-works-hero" />
+        <WrittenWorkReader groups={groups} author={author} />
+      </main>
+      <LandscapeBand image={landscape} />
+      <Footer />
+    </>
+  );
+}

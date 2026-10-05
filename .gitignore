@@ -19,3 +19,6 @@ next-env.d.ts
 
 # os
 .DS_Store
+
+# generated images from this design conversation
+/artifacts/chat-generated-images/

@@ -1,6 +1,8 @@
 {
-  "name": "Eivindvik",
+  "name": "Eivindvik før og no",
   "short_name": "Eivindvik",
+  "description": "Lokalhistorisk arkiv om Eivindvik og Gulen.",
+  "lang": "nn",
   "icons": [
     {
       "src": "/web-app-manifest-192x192.png",
