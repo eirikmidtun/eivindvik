@@ -1,5 +1,6 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import type { Dikt, WrittenWorkGroup } from "../archive";
 import { ArrowIcon } from "./ArrowIcon";
@@ -104,7 +105,7 @@ export function WrittenWorkReader({ groups, author }: WrittenWorkReaderProps) {
 
       <section className="written-reading" aria-labelledby="written-work-title">
         <nav className="breadcrumbs" aria-label="Brødsmuler">
-          <a href="/">Heim</a>
+          <Link href="/">Heim</Link>
           <span aria-hidden="true">/</span>
           <span>Dikt og tekstar</span>
         </nav>

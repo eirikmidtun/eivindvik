@@ -48,22 +48,6 @@ export async function getKapittelPages(kapittelNumber: number) {
   return Promise.all(entries.map((entry) => readJson<ArchivePage>(entry.file)));
 }
 
-export function getKapittelDescription(pages: ArchivePage[], title: string) {
-  const text = pages
-    .flatMap((page) => page.blocks)
-    .find(
-      (block) =>
-        block.type === "paragraph" &&
-        block.text.trim().length >= 100 &&
-        block.text.trim().toLowerCase() !== title.toLowerCase(),
-    );
-  if (!text || text.type !== "paragraph") return undefined;
-
-  const clean = text.text.replace(/\s+/g, " ").trim();
-  if (clean.length <= 155) return clean;
-  return `${clean.slice(0, clean.lastIndexOf(" ", 152))} …`;
-}
-
 export function getFirstImage(pages: ArchivePage[]) {
   for (const page of pages) {
     const image = page.blocks.find((block) => block.type === "image");

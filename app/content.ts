@@ -1,4 +1,4 @@
-export const siteUrl = "https://eivindvik-for-og-no.no";
+export const siteUrl = "https://www.eivindvik-for-og-no.no";
 export const siteName = "Eivindvik før og no";
 export const author = "Magnor Midtun";
 
@@ -18,6 +18,8 @@ export type Kapittel = {
   number: number;
   title: string;
   slug: string;
+  // Meta description for the chapter page, 110–160 characters.
+  description?: string;
   // Set when the chapter is read on another page instead of /kapittel/[slug].
   movedTo?: NavLink;
 };
@@ -47,13 +49,55 @@ export const temaer: Tema[] = [
       height: 238,
     },
     kapitler: [
-      { number: 1, title: "Innleiing", slug: "innleiing" },
-      { number: 2, title: "Namnet", slug: "namnet" },
-      { number: 3, title: "Steinkrossane", slug: "steinkrossane" },
-      { number: 4, title: "Døypefonten i kyrkja", slug: "doeypefonten" },
-      { number: 5, title: "Olavskjelda i Krossteigen", slug: "olavskjelda" },
-      { number: 6, title: "Eivindvik som gamal tingstad", slug: "tingstad" },
-      { number: 7, title: "Gulen kyrkje", slug: "gulen-kyrkje" },
+      {
+        number: 1,
+        title: "Innleiing",
+        slug: "innleiing",
+        description:
+          "Magnor Midtun fortel kvifor han tok til å skrive ned segner, tradisjonar og hendingar frå Eivindvik, med gamle bilete av bygda og Midtunvågen.",
+      },
+      {
+        number: 2,
+        title: "Namnet",
+        slug: "namnet",
+        description:
+          "Kvar kjem namnet Eivindvik frå? Om skrivemåtar frå Øyuindarviik til Evenvik, og tolkingar som vika i ly av øyar og sletta der dei gjorde eiden.",
+      },
+      {
+        number: 3,
+        title: "Steinkrossane",
+        slug: "steinkrossane",
+        description:
+          "Om dei to steinkrossane i Eivindvik, Olavskrossen ved kyrkjegardsporten og krossen i Krossteigen, og segnene om Olav den heilage som reiste dei.",
+      },
+      {
+        number: 4,
+        title: "Døypefonten i kyrkja",
+        slug: "doeypefonten",
+        description:
+          "Segna om døypefonten av stein som Olav den heilage let hogge då sygnene spente døypefatet or hendene på bispen, og kvar steinen har stått sidan.",
+      },
+      {
+        number: 5,
+        title: "Olavskjelda i Krossteigen",
+        slug: "olavskjelda",
+        description:
+          "Om den heilage kjelda under krossen i Krossteigen, offerlunden på prestemyra og kva prost Dahl og biskop Neumann skreiv om staden i 1824.",
+      },
+      {
+        number: 6,
+        title: "Eivindvik som gamal tingstad",
+        slug: "tingstad",
+        description:
+          "Kva kjeldene seier om Eivindvik som den gamle Gulatingsstaden, med oppteikningane til Dahl og Furnæs, urolege tider og det viktigaste tinget.",
+      },
+      {
+        number: 7,
+        title: "Gulen kyrkje",
+        slug: "gulen-kyrkje",
+        description:
+          "Soga om Gulen kyrkje og det gamle Eivindvik prestegjeld, frå gamlekyrkja til inventar, kyrkjeklokker, altartavla og det nye orgelet.",
+      },
     ],
   },
   {
@@ -73,21 +117,51 @@ export const temaer: Tema[] = [
         number: 8,
         title: "Prost Niels Griis Alstrup Dahl",
         slug: "prost-dahl",
+        description:
+          "Prost Niels Griis Alstrup Dahl som jorddyrkar, skulemann og verdiskapar, og alt han gjorde for helse, jordskifte og folkeopplysning i Eivindvik.",
       },
-      { number: 9, title: "Eivindvik som poststad", slug: "poststad" },
+      {
+        number: 9,
+        title: "Eivindvik som poststad",
+        slug: "poststad",
+        description:
+          "Eivindvik som poststad, frå postopneriet i Fonnevika i 1808 til postkontoret på Haugane og postopnarane seinare, etter kjelder frå postmuseet.",
+      },
       {
         number: 10,
         title: "Dampskipsstoppestaden",
         slug: "dampskipsstoppestaden",
+        description:
+          "Eivindvik som stoggestad for dampskipa, med stor trafikk ved kaiane, nye rutesamband og prøveturen med snøggbåten Fjordprins i 1987.",
       },
-      { number: 11, title: "Kongevitjingar", slug: "kongevitjingar" },
-      { number: 12, title: "Andre vitjingar", slug: "andre-vitjingar" },
+      {
+        number: 11,
+        title: "Kongevitjingar",
+        slug: "kongevitjingar",
+        description:
+          "Kongar som har vitja Eivindvik, frå Christian V som åt middag her i 1685 til kong Håkon VII som gjekk i land på Sandalskaien i 1936.",
+      },
+      {
+        number: 12,
+        title: "Andre vitjingar",
+        slug: "andre-vitjingar",
+        description:
+          "Kjende gjester i Eivindvik: Henrik Wergeland, Ivar Aasen, P. Chr. Asbjørnsen, Shetlandsfararane, Berge Viking, skuleskipet Sørlandet og Ragnar Thorseth.",
+      },
       {
         number: 13,
         title: "Namnebyte – frå Evenvik til Gulen",
         slug: "namnebyte",
+        description:
+          "Korleis Evenvik prestegjeld vart til Gulen ved kongeleg resolusjon 17. mai 1890, og drøftingane om namnet som gjekk føre avgjerda.",
       },
-      { number: 14, title: "Andre hendingar", slug: "andre-hendingar" },
+      {
+        number: 14,
+        title: "Andre hendingar",
+        slug: "andre-hendingar",
+        description:
+          "Ungdomslaget fekk eige forsamlingshus i 1933, og bygda fekk songarstemne, Gulatingsstemner, elektrisitet, raset i Neverdal og vegfesten i 1966.",
+      },
     ],
   },
   {
@@ -103,12 +177,48 @@ export const temaer: Tema[] = [
       height: 472,
     },
     kapitler: [
-      { number: 15, title: "Livet i bygda", slug: "livet-i-bygda" },
-      { number: 16, title: "Minne frå krigen 1940–45", slug: "krigen" },
-      { number: 17, title: "Gamle skikkar", slug: "gamle-skikkar" },
-      { number: 18, title: "Gamal julefeiring", slug: "gamal-julefeiring" },
-      { number: 19, title: "Næringslivet", slug: "naeringslivet" },
-      { number: 20, title: "Ymse", slug: "ymse" },
+      {
+        number: 15,
+        title: "Livet i bygda",
+        slug: "livet-i-bygda",
+        description:
+          "Kvardag og fest i Eivindvik: lag og foreiningar, stølar, sommararbeid, korn og mjøl, nye reiskap, livet på gardane og korleis ungane hadde det.",
+      },
+      {
+        number: 16,
+        title: "Minne frå krigen 1940–45",
+        slug: "krigen",
+        description:
+          "Magnor Midtun sine minne frå krigsåra 1940 til 1945 i Eivindvik, med tyske rassiar og båtar i vika og flykampar over fjella.",
+      },
+      {
+        number: 17,
+        title: "Gamle skikkar",
+        slug: "gamle-skikkar",
+        description:
+          "Gamle skikkar i Eivindvik: bearlag, gravferd, bryllaup, fødslar og dåp, konfirmasjon og andre tradisjonar som er i ferd med å gå i gløymeboka.",
+      },
+      {
+        number: 18,
+        title: "Gamal julefeiring",
+        slug: "gamal-julefeiring",
+        description:
+          "Korleis jula vart feira i Eivindvik i gamle dagar, med brygging og baking, kyrkjeferd juledagsmorgon og kveldar ved peisen, fortalt på rim.",
+      },
+      {
+        number: 19,
+        title: "Næringslivet",
+        slug: "naeringslivet",
+        description:
+          "Næringslivet i Eivindvik: gardsdrift, landhandel og skysstasjon i Fonnevika, margarinfabrikk, fargeri, P.R. Sandal og Eivindvik meieri.",
+      },
+      {
+        number: 20,
+        title: "Ymse",
+        slug: "ymse",
+        description:
+          "Ymse frå Eivindvik, mellom anna kristtornen ved gamle kommunehuset som truleg var den største i Skandinavia, og granene som vart planta kring 1870.",
+      },
     ],
   },
   {
@@ -124,8 +234,20 @@ export const temaer: Tema[] = [
       height: 437,
     },
     kapitler: [
-      { number: 21, title: "Gulatingminne", slug: "gulatingminne" },
-      { number: 22, title: "Tankar", slug: "tankar" },
+      {
+        number: 21,
+        title: "Gulatingminne",
+        slug: "gulatingminne",
+        description:
+          "Hundre år med drøftingar om korleis Gulatinget skulle minnast, fram til Tusenårsstaden på Flolid vart opna i 2005 med skulpturar av Bård Breivik.",
+      },
+      {
+        number: 22,
+        title: "Tankar",
+        slug: "tankar",
+        description:
+          "Magnor Midtun sine tankar om Eivindvik som samlingsstad: bygda i ly av øyar og kollar, offerlunden, heilagdomane og det gamle Gulatinget.",
+      },
       { number: 23, title: "Prologar", slug: "prologar", movedTo: writtenWorksLink },
       { number: 24, title: "Rim", slug: "rim", movedTo: writtenWorksLink },
       { number: 25, title: "Høgtider", slug: "hoegtider", movedTo: writtenWorksLink },

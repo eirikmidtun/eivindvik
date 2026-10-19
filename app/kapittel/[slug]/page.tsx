@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { type ArchivePage, getFirstImage, getKapittelDescription, getKapittelPages, getKapittelSections } from "../../archive";
+import { getFirstImage, getKapittelPages, getKapittelSections } from "../../archive";
 import { Footer } from "../../components/Footer";
 import { JsonLd } from "../../components/JsonLd";
 import { KapittelBiletegalleri } from "../../components/KapittelBiletegalleri";
@@ -17,10 +17,10 @@ export function generateStaticParams() {
   return readableKapitler.map((kapittel) => ({ slug: kapittel.slug }));
 }
 
-function describeKapittel(kapittel: (typeof readableKapitler)[number], pages: ArchivePage[]) {
+function describeKapittel(kapittel: (typeof readableKapitler)[number]) {
   return (
-    getKapittelDescription(pages, kapittel.title) ??
-    `${kapittel.title} – kapittel ${kapittel.number} i ${siteName}, ${author} si lokalhistoriske samling om Eivindvik og Gulen.`
+    kapittel.description ??
+    `${kapittel.title}, kapittel ${kapittel.number} i ${siteName}, ${author} si lokalhistoriske samling om Eivindvik og Gulen.`
   );
 }
 
@@ -32,12 +32,11 @@ function findKapittel(slug: string) {
 
 export async function generateMetadata({ params }: PageProps<"/kapittel/[slug]">): Promise<Metadata> {
   const { kapittel } = findKapittel((await params).slug);
-  const pages = await getKapittelPages(kapittel.number);
   const url = `/kapittel/${kapittel.slug}`;
 
   return {
     title: kapittel.title,
-    description: describeKapittel(kapittel, pages),
+    description: describeKapittel(kapittel),
     alternates: { canonical: url },
     openGraph: {
       type: "article",
@@ -71,7 +70,7 @@ export default async function KapittelPage({ params }: PageProps<"/kapittel/[slu
             {
               "@type": "Article",
               headline: kapittel.title,
-              description: describeKapittel(kapittel, pages),
+              description: describeKapittel(kapittel),
               inLanguage: "nn",
               url,
               image: image ? `${siteUrl}${image.src}` : `${siteUrl}/kapittel/${kapittel.slug}/opengraph-image`,
