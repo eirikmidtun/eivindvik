@@ -169,6 +169,8 @@ export type Dikt = {
 export type WrittenWorkGroup = {
   id: string;
   title: string;
+  // Lowercase genre name for a single piece, used in page titles.
+  label: string;
   chapter: number;
   items: Dikt[];
 };
@@ -284,14 +286,23 @@ const writtenWorkGroups = [
   {
     id: "prologar",
     title: "Prologar",
+    label: "prolog",
     chapter: 23,
     indexPage: "kap23--prologar",
     marker: "PROLOGAR",
   },
-  { id: "rim", title: "Rim", chapter: 24, indexPage: "", marker: "RIM" },
+  {
+    id: "rim",
+    title: "Rim",
+    label: "rim",
+    chapter: 24,
+    indexPage: "",
+    marker: "RIM",
+  },
   {
     id: "hoegtider",
     title: "Høgtider",
+    label: "høgtidsdikt",
     chapter: 25,
     indexPage: "",
     marker: "HØGTIDER",
@@ -299,6 +310,7 @@ const writtenWorkGroups = [
   {
     id: "minneord",
     title: "Minneord",
+    label: "minneord",
     chapter: 26,
     indexPage: "kap26--minneord",
     marker: "MINNEORD",
@@ -306,6 +318,7 @@ const writtenWorkGroups = [
   {
     id: "bankar",
     title: "Bankar",
+    label: "dikt",
     chapter: 27,
     indexPage: "kap-27--bankar",
     marker: "BANKAR",
@@ -385,9 +398,19 @@ export async function getWrittenWorkGroups(): Promise<WrittenWorkGroup[]> {
       return {
         id: group.id,
         title: group.title,
+        label: group.label,
         chapter: group.chapter,
         items,
       };
     }),
   );
+}
+
+export async function getWrittenWork(id: string) {
+  const groups = await getWrittenWorkGroups();
+  for (const group of groups) {
+    const index = group.items.findIndex((item) => item.id === id);
+    if (index !== -1) return { group, index, work: group.items[index] };
+  }
+  return undefined;
 }
