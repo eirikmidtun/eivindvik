@@ -1,6 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
 import type { Tema } from "../content";
+import { localePath } from "../i18n";
+import { getLocale } from "../locale";
 import { ArrowIcon } from "./ArrowIcon";
 
 type TemaCardProps = {
@@ -8,9 +10,11 @@ type TemaCardProps = {
   index: string;
 };
 
-export function TemaCard({ tema, index }: TemaCardProps) {
+export async function TemaCard({ tema, index }: TemaCardProps) {
+  const locale = await getLocale();
+
   return (
-    <Link className="tema-card" href={`/kapittel/${tema.kapitler[0].slug}`}>
+    <Link className="tema-card" href={localePath(locale, `/kapittel/${tema.kapitler[0].slug}`)}>
       <Image
         className="tema-card-image"
         src={tema.image.src}

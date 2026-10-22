@@ -1,7 +1,7 @@
 export const siteUrl = "https://www.eivindvik-for-og-no.no";
 export const siteName = "Eivindvik før og no";
 export const author = "Magnor Midtun";
-export const siteDescription =
+const siteDescription =
   "Lokalhistorisk arkiv om Eivindvik og Gulen: Gulatinget, steinkrossane, Gulen kyrkje, kongevitjingar og minne frå bygda, skrive av Magnor Midtun.";
 
 export type ImageAsset = {
@@ -37,7 +37,7 @@ export type Tema = {
   kapitler: Kapittel[];
 };
 
-export const temaer: Tema[] = [
+const temaer: Tema[] = [
   {
     id: "stad-og-tru",
     kapittelRange: "01–07",
@@ -259,24 +259,29 @@ export const temaer: Tema[] = [
   },
 ];
 
-export const kapitler = temaer.flatMap((tema) =>
-  tema.kapitler.map((kapittel) => ({
-    ...kapittel,
-    temaId: tema.id,
-    temaTitle: tema.title,
-  })),
-);
+// The flat chapter list drives routing, prev/next navigation and the sitemap.
+export function flattenKapitler(temaer: Tema[]) {
+  return temaer.flatMap((tema) =>
+    tema.kapitler.map((kapittel) => ({
+      ...kapittel,
+      temaId: tema.id,
+      temaTitle: tema.title,
+    })),
+  );
+}
+
+const kapitler = flattenKapitler(temaer);
 
 // Chapters with their own page under /kapittel/[slug].
-export const readableKapitler = kapitler.filter((kapittel) => !kapittel.movedTo);
+const readableKapitler = kapitler.filter((kapittel) => !kapittel.movedTo);
 
-export const readLink: NavLink = {
+const readLink: NavLink = {
   href: `/kapittel/${kapitler[0].slug}`,
   label: "Les historia",
 };
 
 // Shown in the PageHero on every page and in the footer.
-export const navLinks: NavLink[] = [
+const navLinks: NavLink[] = [
   { href: "/", label: "Heim" },
   { href: "/kapittel", label: "Kapittel" },
   writtenWorksLink,
@@ -284,7 +289,7 @@ export const navLinks: NavLink[] = [
   { href: "/om-oss", label: "Om oss" },
 ];
 
-export const hero = {
+const hero = {
   title: "Eivindvik",
   subtitle: "– der krossane står",
   lead: "Ei reise gjennom historia, landskapet og menneska som har forma Eivindvik, for deg som bur her og for deg som kjem på vitjing.",
@@ -296,7 +301,7 @@ export const hero = {
   },
 };
 
-export const tusenaarsstad = {
+const tusenaarsstad = {
   eyebrow: "Tusenårsstaden Gulatinget",
   title: "Eit minne etter hundre år",
   text: "I over hundre år drøfta folk korleis Gulatinget skulle minnast. I 1999 vart Gulatinget valt til tusenårsstad for Sogn og Fjordane, og 27. august 2005 vart Tusenårsstaden opna på Flolid, med steinsøyler og skulpturar av Bård Breivik. Kring 2000 menneske kom til opninga, og Magnor Midtun las prolog.",
@@ -325,14 +330,14 @@ export type Kors = {
   image: ImageAsset;
 };
 
-export const korsIntro = {
+const korsIntro = {
   eyebrow: "Symbol i landskapet",
   title: "Dei to krossane",
   text: "Steinkrossane er dei mest kjende sogeminna i Eivindvik. Den eine står ved kyrkjegardsporten, den andre i Krossteigen, nær den gamle heilage kjelda. Dei blir gjerne kalla den keltiske og den angliske krossen, og formene deira peikar mot kontakt med dei britiske øyane.\n\nSkriftlege kjelder omtalar to krossar her alt i 1626, men vi veit ikkje sikkert kven som reiste dei eller kor gamle dei er. Tradisjonane knyter dei til overgangen til kristendomen og til samlingar kring kyrkja og tinget.",
   link: { href: "/kapittel/steinkrossane", label: "Les meir om krossane" },
 };
 
-export const kors: Kors[] = [
+const kors: Kors[] = [
   {
     title: "Olavskrossen",
     text: "Den keltiske krossen står utanfor kyrkjegardsporten. Segna seier at Olav den heilage fekk han reist.",
@@ -355,14 +360,14 @@ export const kors: Kors[] = [
   },
 ];
 
-export const utforsk = {
+const utforsk = {
   eyebrow: `${kapitler.length} kapittel`,
   title: "Utforsk historia om Eivindvik",
   text: `Her finn du ${kapitler.length} kapittel om menneska, stadene, næringane og livet i Eivindvik før og no. Du kan lese dei kronologisk eller velje fritt etter det som interesserer deg.`,
   link: { href: "/kapittel", label: `Sjå alle ${kapitler.length} kapitla` },
 };
 
-export const authorIntro = {
+const authorIntro = {
   eyebrow: "Om forfattaren",
   text: `${author} har skrive og samla det lokalhistoriske stoffet i Eivindvik før og no. Arbeidet byggjer på kjelder, stadkunnskap og ei sterk interesse for historia, landskapet og folket i Eivindvik.`,
   link: { href: "/om-oss", label: `Les meir om ${author}` },
@@ -375,7 +380,7 @@ export const authorIntro = {
   caption: "Magnor Midtun les prolog på Gulatingseminaret. Foto: Ukjent.",
 };
 
-export const kartPage = {
+const kartPage = {
   heroImage: hero.image,
   eyebrow: "Kart",
   title: "Eivindvik på kartet",
@@ -393,7 +398,7 @@ export const kartPage = {
   link: { href: "/kapittel/namnet", label: "Les om namnet Eivindvik" },
 };
 
-export const writtenWorksPage = {
+const writtenWorksPage = {
   heroImage: hero.image,
   eyebrow: "Dikt og tekstar",
   title: "Dikt og tekstar av Magnor Midtun",
@@ -407,7 +412,7 @@ export type TextSection = {
   paragraphs: string[];
 };
 
-export const omOssPage = {
+const omOssPage = {
   heroImage: hero.image,
   eyebrow: "Om oss",
   title: `${author}`,
@@ -449,3 +454,24 @@ export const omOssPage = {
     label: "Sjå den opphavlege heimesida",
   } satisfies NavLink,
 };
+
+export const nnContent = {
+  siteDescription,
+  temaer,
+  kapitler,
+  readableKapitler,
+  readLink,
+  navLinks,
+  hero,
+  tusenaarsstad,
+  korsIntro,
+  kors,
+  utforsk,
+  authorIntro,
+  kartPage,
+  writtenWorksPage,
+  omOssPage,
+};
+
+// The English content in content-en.ts must have the same shape.
+export type SiteContent = typeof nnContent;

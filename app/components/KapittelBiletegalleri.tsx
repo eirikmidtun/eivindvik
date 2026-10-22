@@ -3,10 +3,10 @@ import type { ArchiveBlock, ArchivePage } from "../archive";
 
 type KapittelBiletegalleriProps = {
   pages: ArchivePage[];
-  title: string;
+  fallbackAlt: string;
 };
 
-export function KapittelBiletegalleri({ pages, title }: KapittelBiletegalleriProps) {
+export function KapittelBiletegalleri({ pages, fallbackAlt }: KapittelBiletegalleriProps) {
   const images = pages.flatMap((page) => page.blocks).filter((block): block is Extract<ArchiveBlock, { type: "image" }> => block.type === "image").slice(0, 2);
   if (images.length === 0) return null;
 
@@ -16,7 +16,7 @@ export function KapittelBiletegalleri({ pages, title }: KapittelBiletegalleriPro
         <figure className="kapittel-gallery-figure" key={image.src}>
           <Image
             src={image.src}
-            alt={image.alt || image.caption || `Bilete frå kapittelet «${title}»`}
+            alt={image.alt || image.caption || fallbackAlt}
             width={image.width}
             height={image.height}
             sizes="(max-width: 720px) 100vw, (max-width: 1100px) 45vw, 520px"

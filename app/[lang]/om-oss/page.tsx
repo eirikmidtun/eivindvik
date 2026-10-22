@@ -1,26 +1,24 @@
 import type { Metadata } from "next";
-import { ButtonLink } from "../components/ButtonLink";
-import { CaptionedImage } from "../components/CaptionedImage";
-import { Footer } from "../components/Footer";
-import { PageHero } from "../components/PageHero";
-import { author, omOssPage, siteName } from "../content";
+import { ButtonLink } from "../../components/ButtonLink";
+import { CaptionedImage } from "../../components/CaptionedImage";
+import { Footer } from "../../components/Footer";
+import { PageHero } from "../../components/PageHero";
+import { getContent, getDictionary } from "../../dictionary";
+import { pageMetadata, resolveLocale } from "../../metadata";
 
-export const metadata: Metadata = {
-  title: `${author} – om forfattaren`,
-  description: omOssPage.description,
-  alternates: { canonical: "/om-oss" },
-  openGraph: {
-    title: `${author} – om forfattaren`,
-    description: omOssPage.description,
-    siteName,
-    locale: "nn_NO",
-    type: "website",
-    url: "/om-oss",
-    images: ["/opengraph-image"],
-  },
-};
+export async function generateMetadata({ params }: PageProps<"/[lang]/om-oss">): Promise<Metadata> {
+  const locale = resolveLocale((await params).lang);
 
-export default function OmOssPage() {
+  return pageMetadata(locale, "/om-oss", {
+    title: getDictionary(locale).omOssTitle,
+    description: getContent(locale).omOssPage.description,
+    siteImage: true,
+  });
+}
+
+export default async function OmOssPage({ params }: PageProps<"/[lang]/om-oss">) {
+  const { omOssPage } = getContent(resolveLocale((await params).lang));
+
   return (
     <>
       <main>
