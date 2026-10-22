@@ -1,5 +1,5 @@
 import type { Metadata } from "next";
-import { author, siteName, siteUrl } from "./content";
+import { author, siteDescription, siteName, siteUrl } from "./content";
 import "./globals.css";
 
 export const metadata: Metadata = {
@@ -8,8 +8,7 @@ export const metadata: Metadata = {
     default: `${siteName} | Lokalhistorisk arkiv`,
     template: `%s | ${siteName}`,
   },
-  description:
-    "Lokalhistorisk arkiv om Eivindvik og Gulen: Gulatinget, steinkrossane, Gulen kyrkje, kongevitjingar og minne frå bygda, skrive av Magnor Midtun.",
+  description: siteDescription,
   authors: [{ name: author }],
   openGraph: {
     siteName,

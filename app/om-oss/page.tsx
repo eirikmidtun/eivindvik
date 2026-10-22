@@ -3,12 +3,21 @@ import { ButtonLink } from "../components/ButtonLink";
 import { CaptionedImage } from "../components/CaptionedImage";
 import { Footer } from "../components/Footer";
 import { PageHero } from "../components/PageHero";
-import { omOssPage } from "../content";
+import { author, omOssPage, siteName } from "../content";
 
 export const metadata: Metadata = {
-  title: "Om oss",
+  title: `${author} – om forfattaren`,
   description: omOssPage.description,
   alternates: { canonical: "/om-oss" },
+  openGraph: {
+    title: `${author} – om forfattaren`,
+    description: omOssPage.description,
+    siteName,
+    locale: "nn_NO",
+    type: "website",
+    url: "/om-oss",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function OmOssPage() {

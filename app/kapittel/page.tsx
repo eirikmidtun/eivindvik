@@ -5,10 +5,21 @@ import { KapittelGroup } from "../components/KapittelGroup";
 import { PageHero } from "../components/PageHero";
 import { author, hero, kapitler, siteName, temaer } from "../content";
 
+const description = `Oversikt over alle ${kapitler.length} kapitla i arkivet om Eivindvik – frå steinkrossane og tingstaden til krigsminne, skikkar, rim og minneord.`;
+
 export const metadata: Metadata = {
   title: "Alle kapittel",
-  description: `Oversikt over alle ${kapitler.length} kapitla i arkivet om Eivindvik – frå steinkrossane og tingstaden til krigsminne, skikkar, rim og minneord.`,
+  description,
   alternates: { canonical: "/kapittel" },
+  openGraph: {
+    title: "Alle kapittel",
+    description,
+    siteName,
+    locale: "nn_NO",
+    type: "website",
+    url: "/kapittel",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function KapittelIndexPage() {

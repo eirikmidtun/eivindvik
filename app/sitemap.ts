@@ -6,7 +6,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   const groups = await getWrittenWorkGroups();
 
   return [
-    { url: siteUrl, priority: 1 },
+    { url: `${siteUrl}/`, priority: 1 },
     { url: `${siteUrl}/kapittel`, priority: 0.9 },
     { url: `${siteUrl}/dikt-og-tekstar`, priority: 0.7 },
     { url: `${siteUrl}/kart`, priority: 0.6 },

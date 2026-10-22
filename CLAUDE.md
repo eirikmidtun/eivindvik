@@ -39,6 +39,6 @@ Components import the modules they need with relative paths (`../../archive`), n
 - Keep page data in `app/content.ts` and shared page components directly in `app/components/`. Keep `app/page.tsx` as a readable composition; avoid extra directory layers and barrel files.
 - Server Components are the default. Add a client boundary only for UI that needs state, event handlers, or browser APIs. Use composition instead of boolean props to select different layouts.
 - In Next.js 16, use `preload` when a `next/image` asset must be preloaded; `priority` is deprecated.
-- Route feedback lives in `app/loading.tsx`, `app/error.tsx`, and `app/not-found.tsx`. Keep all messages in Norwegian and follow the installed Next.js file conventions.
+- Route feedback lives in `app/error.tsx` and `app/not-found.tsx`. Keep all messages in Norwegian and follow the installed Next.js file conventions. Keep archive content visible in the initial HTML without JavaScript; a root `app/loading.tsx` can leave the static content hidden behind its fallback for clients without JavaScript.
 - SEO rules (metadata, sitemap, OG images, JSON-LD, verification) live in `.claude/skills/seo/SKILL.md`; follow it when adding routes or content.
 - Keep the README specific to this archive. Remove unused starter assets and empty configuration files instead of carrying generic scaffold content forward.

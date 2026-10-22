@@ -1,6 +1,8 @@
 export const siteUrl = "https://www.eivindvik-for-og-no.no";
 export const siteName = "Eivindvik før og no";
 export const author = "Magnor Midtun";
+export const siteDescription =
+  "Lokalhistorisk arkiv om Eivindvik og Gulen: Gulatinget, steinkrossane, Gulen kyrkje, kongevitjingar og minne frå bygda, skrive av Magnor Midtun.";
 
 export type ImageAsset = {
   src: string;
@@ -278,6 +280,7 @@ export const navLinks: NavLink[] = [
   { href: "/", label: "Heim" },
   { href: "/kapittel", label: "Kapittel" },
   writtenWorksLink,
+  { href: "/kart", label: "Kart" },
   { href: "/om-oss", label: "Om oss" },
 ];
 

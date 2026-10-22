@@ -213,11 +213,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 .status-page p:not(.eyebrow) { color: var(--muted); }
 .status-button { display: inline-block; margin-top: 8px; padding: 10px 18px; border: 0; border-radius: 3px; background: var(--accent); color: #fff; font-family: var(--font-ui); font-size: 14px; cursor: pointer; }
 .status-button:hover { background: var(--accent-dark); }
-.loading-spinner { width: 24px; height: 24px; margin-bottom: 12px; border: 2px solid var(--border); border-top-color: var(--accent); border-radius: 50%; animation: spin 800ms linear infinite; }
-.loading-spinner + p { color: var(--muted); }
-
-@keyframes spin { to { transform: rotate(360deg); } }
-
 @media (max-width: 960px) {
   .tema-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
@@ -225,9 +220,10 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 @media (max-width: 860px) {
   :root { --gutter: 20px; }
   .page-hero-bar { display: flex; flex-direction: column; align-items: center; gap: 14px; padding-top: 20px; }
-  .hero-nav ul { flex-wrap: nowrap; white-space: nowrap; }
+  .hero-nav { max-width: 100%; }
+  .hero-nav ul { gap: 4px 16px; }
   .hero-nav ul > li:first-child { display: none; }
-  .hero-nav ul > li:nth-child(2)::before { display: none; }
+  .hero-nav li + li::before { display: none; }
   .page-hero-text { padding: 28px 4px 96px; }
   .split-section { padding: 48px 0; }
   .split-section-grid { grid-template-columns: 1fr; gap: 32px; }
@@ -340,7 +336,6 @@ ul, ol { margin: 0; padding: 0; list-style: none; }
 
 @media (prefers-reduced-motion: reduce) {
   html { scroll-behavior: auto; }
-  .loading-spinner { animation: none; }
   .tema-card { transition: none; }
   .tema-card:hover { transform: none; }
 }

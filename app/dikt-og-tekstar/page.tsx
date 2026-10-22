@@ -9,6 +9,15 @@ export const metadata: Metadata = {
   title: "Dikt og tekstar",
   description: writtenWorksPage.description,
   alternates: { canonical: "/dikt-og-tekstar" },
+  openGraph: {
+    title: writtenWorksPage.title,
+    description: writtenWorksPage.description,
+    siteName,
+    locale: "nn_NO",
+    type: "website",
+    url: "/dikt-og-tekstar",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default async function WrittenWorksPage() {

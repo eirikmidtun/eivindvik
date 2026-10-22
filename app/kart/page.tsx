@@ -3,12 +3,21 @@ import { ButtonLink } from "../components/ButtonLink";
 import { CaptionedImage } from "../components/CaptionedImage";
 import { Footer } from "../components/Footer";
 import { PageHero } from "../components/PageHero";
-import { kartPage } from "../content";
+import { kartPage, siteName } from "../content";
 
 export const metadata: Metadata = {
-  title: "Kart",
+  title: "Kart over Eivindvik frå 1771",
   description: kartPage.description,
   alternates: { canonical: "/kart" },
+  openGraph: {
+    title: "Kart over Eivindvik frå 1771",
+    description: kartPage.description,
+    siteName,
+    locale: "nn_NO",
+    type: "website",
+    url: "/kart",
+    images: ["/opengraph-image"],
+  },
 };
 
 export default function KartPage() {

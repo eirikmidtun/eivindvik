@@ -12,6 +12,7 @@ import {
   hero,
   kors,
   korsIntro,
+  siteDescription,
   siteName,
   siteUrl,
   temaer,
@@ -21,6 +22,14 @@ import {
 
 export const metadata: Metadata = {
   alternates: { canonical: "/" },
+  openGraph: {
+    title: `${siteName} | Lokalhistorisk arkiv`,
+    description: siteDescription,
+    siteName,
+    locale: "nn_NO",
+    type: "website",
+    url: "/",
+  },
 };
 
 export default function HomePage() {
