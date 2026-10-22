@@ -12,7 +12,8 @@ Skriv domeneord i koden på bokmål (`Tema`, `Kapittel`, `Arkiv`, flertall som
 `temaer` og `kapitler`). Alt annet i koden – mapper, filer, tekniske navn,
 props, CSS-klasser og kommentarer – skrives på engelsk, for eksempel
 `TemaCard`, `KapittelGroup`, `Header` og `.section-heading`. Brukerrettet tekst
-og URL-ankre er innhold og skrives på nynorsk.
+er innhold og skrives på nynorsk, med engelsk versjon ved siden av. URL-er og
+ankre er nynorske på begge språk.
 
 ## Struktur
 
@@ -22,7 +23,10 @@ og URL-ankre er innhold og skrives på nynorsk.
   enklere.
 - Legg statisk sideinnhold og typer i en egen fil som `app/content.ts` når det
   tjener flere komponenter. Hold data atskilt fra presentasjonen.
-- Hold `app/page.tsx` som en kort sidekomposisjon. Flytt større eller
+- Alle ruter ligger under `app/[lang]/` (`nn` og `en`). Brukerrettet tekst
+  hentes med `getContent(locale)` og `getDictionary(locale)`, ikke skrevet
+  direkte i komponentene, og interne lenker bygges med `localePath`.
+- Hold `app/[lang]/page.tsx` som en kort sidekomposisjon. Flytt større eller
   gjenbrukbare deler ut i navngitte komponenter.
 - Importer komponenter direkte fra filen de kommer fra. Ikke lag samlefiler
   eller barrel-filer med re-eksporter.
@@ -61,7 +65,7 @@ og URL-ankre er innhold og skrives på nynorsk.
   konkret stabilitetsgrunn tilsier det.
 - Unngå delbar, muterbar modulnivåtilstand i server-rendering.
 - Bruk semantisk HTML, tastaturtilgjengelig navigering, beskrivende alternativ
-  tekst for meningsbærende bilder og norske navn på tilgjengelige kontroller.
+  tekst for meningsbærende bilder og navn på tilgjengelige kontroller på sidens språk.
 
 ## Før du leverer
 

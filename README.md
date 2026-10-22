@@ -10,6 +10,8 @@ Magnor budde i Eivindvik og kjende staden, folket og landskapet godt. Han var ba
 
 Resultatet vart 27 kapittel, som han oppsummerte og la ut på si eiga heimeside og sist oppdaterte i 2010.
 
+Sida er på nynorsk, og heile arkivet finst òg i engelsk omsetjing under [/en](https://www.eivindvik-for-og-no.no/en). Den nynorske originalteksten gjeld.
+
 ### Kva du finn på sida
 
 - **Stad og tru.** Namnet, steinkrossane, tingstaden og Gulen kyrkje.
@@ -39,20 +41,25 @@ pnpm dev
 
 ```text
 app/
+├── [lang]/                  # alle rutene, på nynorsk (nn) og engelsk (en)
+│   ├── kapittel/
+│   │   ├── [slug]/          # kvart kapittel, med eige delingsbilete
+│   │   └── page.tsx         # oversikt over alle kapitla
+│   ├── dikt-og-tekstar/     # prologar, rim og minneord
+│   ├── kart/                # kart frå 1771
+│   ├── om-oss/              # om Magnor Midtun
+│   ├── layout.tsx           # metadata og rotlayout per språk
+│   └── page.tsx             # framsida
 ├── components/              # komponentane sidene er sette saman av
-├── kapittel/
-│   ├── [slug]/              # kvart kapittel, med eige delingsbilete
-│   └── page.tsx             # oversikt over alle kapitla
-├── dikt-og-tekstar/         # prologar, rim og minneord
-├── kart/                    # kart frå 1771
-├── om-oss/                  # om Magnor Midtun
 ├── archive.ts               # les arkivteksten frå content/archive/
-├── content.ts               # tema, kapittel og redaksjonell tekst
+├── content.ts               # tema, kapittel og redaksjonell tekst (nynorsk)
+├── content-en.ts            # den same teksten på engelsk
+├── dictionary.ts            # tekst i grensesnittet på begge språk
+├── i18n.ts                  # språk og språkstiar
 ├── globals.css              # global stil og fargevariablar
-├── layout.tsx               # metadata og rotlayout
-├── page.tsx                 # framsida
 └── ...
 content/archive/             # originalteksten frå Magnor si heimeside
+content/archive/en/          # engelsk omsetjing av arkivteksten
 public/archive/              # originalbileta frå Magnor si heimeside
 scripts/
 └── scrape-magnor.mjs        # hentar heimesida til Magnor på nytt

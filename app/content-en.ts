@@ -97,7 +97,7 @@ const kapittelText: Record<number, { title: string; description?: string }> = {
   14: {
     title: "Other events",
     description:
-      "The youth society got its own hall in 1933, and the village saw choir festivals, Gulating gatherings, electricity, the Neverdal landslide and the 1966 road celebration.",
+      "The youth hall of 1933, choir festivals, Gulating gatherings, electricity, the Neverdal landslide and the 1966 road celebration in Eivindvik.",
   },
   15: {
     title: "Life in the village",
@@ -197,7 +197,7 @@ const omOssSections: TextSection[] = [
 
 export const enContent: SiteContent = {
   siteDescription:
-    "Local history archive about Eivindvik and Gulen in western Norway: the Gulating, the stone crosses, Gulen church, royal visits and village memories, by Magnor Midtun.",
+    "Local history archive about Eivindvik and Gulen: the Gulating, the stone crosses, Gulen church, royal visits and village memories, by Magnor Midtun.",
   temaer,
   kapitler,
   readableKapitler,
